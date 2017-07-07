@@ -1,0 +1,968 @@
+/*********************************************************
+*   Project: Afíliate Form                               *
+*   Author: Omar Sainz                                   *
+*   Spacing: 2                                           *
+*   Index                                                *
+*                                                        *
+*   1. Global Styles                                     *
+*   2. Form                                              *
+*   3. Sponsor Section                                   *
+*   4. Inputs                                            *
+*   5. Selects                                           *
+*   6. Text Styles                                       *
+*   7. Forms                                             *
+*   8. Extras                                            *
+**********************************************************/
+
+/*********************************************************
+**                                                      **
+**                 1. Global Styles                     **
+**                                                      **
+*********************************************************/
+
+/* Custom Font*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+/* Basic Reset*/
+* {margin: 0; padding: 0;}
+
+html { height: 100%; }
+
+body { background: #eee; font-family: 'Open Sans', arial, verdana; }
+
+/* HTML Elements */ 
+input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #757575;
+  width: 100%;
+}
+
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: 4px 0 6px 0;
+  font-size: 14px;
+  color: #666;
+  border: none;
+  margin: 2rem 0;
+  border-bottom: 1px solid #757575;
+  height: 3.8rem;
+  border-radius: 0;
+}
+
+input:focus { outline:none; }
+
+/* Active State */
+input:focus ~ label, input:valid ~ label    {
+  top: -6px;
+  font-size: 12px;
+  color: #7c3f91;
+}
+
+/* Remove focus */
+select:focus { outline: none; }
+
+.form--title {
+  text-align: center;
+  margin: 1rem 0 0 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*********************************************************
+**                                                      **
+**                 2. Form                              **
+**                                                      **
+*********************************************************/
+
+.form--container  {
+	width: 1024px;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.form--banner {
+	background: url('../img/banner-header.png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 21rem;
+  margin-top: 2rem;
+}
+
+/* Form Styles */
+.regForm {
+  width: 1024px;
+  text-align: center;
+  position: relative;
+}
+
+.regForm fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin-bottom: 10rem;
+  margin-top: -1rem;
+}
+
+/* Hide all except first fieldset*/
+.regForm fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/* Inputs inside of Form */
+.regForm input, .regForm textarea {
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+  color: #2C3E50;
+}
+/* Buttons */
+.regForm .action-button {
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  /* margin: 10px 5px; */
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.regForm .action-button:hover, .regForm .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+.regForm .action-button.btnPrevious, 
+.regForm .action-button.btnNext,
+.regForm .action-button.btnSubmit {
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
+  margin: 4rem 0 0 0;
+}
+
+.form--state {
+	margin-bottom: 8rem;
+}
+
+/* Hide label */
+.mdl-selectfield label {display: none;}
+
+/* Use custom arrow */
+.mdl-selectfield select {appearance: none}
+
+.mdl-selectfield {
+  font-family: 'Open Sans','Helvetica',Arial ,sans-serif;
+  position: relative;
+}
+
+.mdl-selectfield::after {
+  position: absolute;
+  top: 0.75em;
+  right: 0.5em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: .25em solid transparent;
+  border-right: .25em solid transparent;
+  border-top: .375em solid $select-border-color;
+  pointer-events: none;
+}
+
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+/* Label */ 
+.label {
+  color: #666; 
+  font-size: 13px;
+  font-weight:normal;
+  position: absolute;
+  pointer-events:none;
+  left: 8px;
+  top: 20px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/*progressbar*/
+
+.form--progressBar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+.form--progressBar li {
+	list-style-type: none;
+  background: #f63350;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 100%;
+  float: left;
+  position: relative;
+  display: inline-block;
+  height: 3rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 20px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 0px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after {
+	background: #27AE60;
+	color: white;
+}
+
+/* Sponsor Section */ 
+.group {
+  padding: 1rem 0;
+}
+
+/*********************************************************
+**                                                      **
+**                 3. Sponsor Section                   **
+**                                                      **
+*********************************************************/
+
+.form--section__sponsors {
+  position: relative;
+  margin-top: 1rem;
+}
+
+/* Select Sponsor */
+.form__step--sponsor {
+  text-align: left;
+  margin-left: 1.5rem;
+}
+
+.form__step--sponsor label { vertical-align: middle; }
+
+.form__step--sponsor h4 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2rem;
+  color: #666;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.form__step--sponsor .box {
+  width: 70px;
+  height: 50px;
+  background-color: #eee;
+  transition: all 250ms ease;
+  will-change: transition;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  font-weight: 900;
+}
+    
+.box:active{
+  transform: translateY(10px);
+}
+
+.form__step--sponsor .box span {
+  position: absolute;
+  transform: translate(0, 7px);
+  left: 0;
+  right: 0;
+  transition: all 300ms ease;
+  font-size: 12px;
+  user-select: none;
+  color: #666;
+}
+
+.form__step--sponsor .box span::before {
+  font-size: 1.2em;
+  font-family: FontAwesome;
+  display: block;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  font-weight: normal;
+  color: #666;
+}
+
+.form__step--sponsor .is-not-selected span::before {
+  content: '\f183';
+  color: #fff;
+}
+
+.form__step--sponsor .is-selected span::before {
+  content: '\f183';
+  color: #fff;
+}
+
+.form__step--sponsor input[type="radio"] {
+  display: none;
+}
+
+.form__step--sponsor input[type="radio"]:checked + .is-selected.box {
+  background-color: #7c3f91;
+}
+
+.form__step--sponsor input[type="radio"]:checked + .is-not-selected.box {
+  background-color: #f63350;
+}
+
+.form__step--sponsor input[type="radio"]:checked + .box span {
+  color: white;
+  transform: translateY(7px);
+}
+
+.form__step--sponsor input[type="radio"]:checked + .box span::before {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.form__step--sponsor input[type="radio"]:checked + .box span::before {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Select Sex */ 
+.selectSex {
+	width: 100%;
+}
+
+.selectSexRadio,
+.selectKitMaletinRadio,
+.selectCompanyRadio,
+.selectPaymentRadio {
+  display: inline-block;
+  padding-right: 7px;
+  font-size: 13px;
+  line-height: 40px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.selectSex h4 {
+  color: #666;
+  font-size: 13px;
+  font-weight: normal;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -2rem;
+}
+
+.selectSexRadio:hover .inner,
+.selectKitMaletinRadio:hover .inner,
+.selectCompanyRadio:hover .inner,
+.selectPaymentRadio:hover .inner {
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: .5;
+}
+
+.selectSexRadio input,
+.selectKitMaletinRadio input,
+.selectCompanyRadio input,
+.selectPaymentRadio input {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+
+.selectSexRadio input:checked + .outer .inner,
+.selectKitMaletinRadio input:checked + .outer .inner,
+.selectCompanyRadio input:checked + .outer .inner,
+.selectPaymentRadio input:checked + .outer .inner {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+
+.selectSexRadio input:checked + .outer { 
+	border: 3px solid #f08b3b; animation: cardEnter;
+}
+
+.selectKitMaletinRadio input:checked + .outer,
+.selectCompanyRadio input:checked + .outer { 
+	border: 3px solid #79efd7; animation: cardEnter;
+}
+
+.selectPaymentRadio input:checked + .outer {
+	border: 3px solid #f63350; animation: cardEnter;
+}
+ 
+.selectSexRadio input:focus + .outer .inner,
+.selectKitMaletinRadio input:focus + .outer .inner,
+.selectCompanyRadio input:focus + .outer .inner,
+.selectPaymentRadio input:focus + .outer .inner {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  background-color: #e67012;
+  animation: cardEnter;
+}
+
+.selectKitMaletinRadio input:focus + .outer .inner,
+.selectCompanyRadio input:focus + .outer .inner {
+	background-color: #79efd7;
+}
+
+.selectPaymentRadio input:focus + .outer .inner {
+	background-color: #f63350;
+}
+
+.selectSexRadio .outer,
+.selectKitMaletinRadio .outer,
+.selectCompanyRadio .outer, 
+.selectPaymentRadio .outer {
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin: 10px 9px 10px 10px;
+  border: 3px solid #7c3f91;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.selectKitMaletinRadio .outer,
+.selectCompanyRadio .outer {
+  border: 3px solid #79efd7;	
+}
+
+.selectPaymentRadio .outer {
+	border: 3px solid #f63350;
+}
+
+.selectSexRadio .inner,
+.selectKitMaletinRadio .inner,
+.selectCompanyRadio .inner,
+.selectPaymentRadio .inner {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  display: block;
+  margin: 2px;
+  border-radius: 50%;
+  background-color: #f08b3b;
+  opacity: 0;
+}
+
+.selectKitMaletinRadio .inner,
+.selectCompanyRadio .inner  {
+	background-color: #79efd7;
+}
+
+.selectPaymentRadio .inner {
+	border: 3px solid #f63350;
+	background-color: #f63350;
+}
+
+/*buttons*/
+.o--afiliateForm .c--btnNext {
+  width: 100%;
+  background: #7c3f91;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#afiliateForm .action-button:hover, #afiliateForm .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+
+/* Select Date - Birthday */ 
+.l--birthday, input[type="date"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+label.form--birthday {
+  font-size: 13px;
+}
+
+label.c--birthday {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  margin: 1.5rem 0;
+}
+
+input[type="date"] {
+  display: inline-block;
+  vertical-align: middle;
+  width: 52%;
+  text-indent: .5rem;
+  font-size: 13px;
+  padding: 15px 0;
+}
+
+/* Input with Material Design Animation */ 
+
+.bar  { position:relative; display:block; width: 100%; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#7c3f91; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* Active State */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* Kit */
+.kit--list {
+  list-style: none;
+  text-align: left;
+}
+
+
+/* Company */ 
+.company {
+  margin: 1rem 0 5rem 0;
+}
+
+.process--title {
+  margin-top: 3rem;
+}
+
+.selectCompanyRadio img {
+	width: 14rem;
+	margin-top: .8rem;
+}
+
+.options--container {
+  min-height: 21rem;
+  padding: 4rem 0;
+  margin-top: -4rem;
+}
+
+.form--line.kit {
+  width: 97%;
+  margin: 20px auto;
+}
+
+.selectKit--title {
+    margin-bottom: -13px;
+}
+
+input#btnSecondStep,
+input#btnPreviousFirstStep,
+input#btnPreviousSecondStep,
+input#btnPayment  {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.regForm input.btnCedis.action-button.theme--purple {
+  top: -2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cedis--container {
+  padding: 1rem 0;
+  margin: 4rem 0 0rem 0;
+}
+
+.form--payment__title {
+  margin-top: 6rem;
+}
+
+.form--payment__description {
+  padding: 3rem 0;
+}
+
+.form--payment img {
+  margin: 0 auto;
+  padding: 2rem 0 3rem 0;
+}
+
+/*********************************************************
+**                                                      **
+**                 x. titles                            **
+**                                                      **
+*********************************************************/
+
+.kit--title {
+  text-align: left;
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+
+/*********************************************************
+**                                                      **
+**                 x. Themes                            **
+**                                                      **
+*********************************************************/
+
+.regForm .action-button.theme--purple {
+  background: #7c3f91;
+}
+
+.regForm .action-button.theme--cyan {
+  background: #44e3b3;
+}
+
+.regForm .action-button.theme--red {
+  background: #f63350;
+}
+
+.form--product {
+  height: 32rem;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.form--product.theme--cyan {
+	background: #79efd7;
+}
+
+.form--product.theme--orange {
+  background: #f77f00;
+}
+
+figure.form--product img {
+  position: relative;
+  top: 5rem;
+  height: 24rem;
+  margin: 0 auto;
+}
+
+.form--lastStep__products {
+  background: #8d86ff;
+  border-radius: 5px;
+  padding: 5rem 1rem 3rem 1rem;
+}
+
+div.form--lastStep__products img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.i-social {
+	width: 2rem;
+}
+
+.form--lastStep {
+  width: 100%;
+  height: 22rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.form--lastStep span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  padding: 1.5rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  color: #fff;
+  background: rgba(0, 0, 0, .1);
+  text-shadow: 0px 0px 1px #000;
+}
+
+.form--lastStep a:hover,
+.form--lastStep a:active {
+	text-decoration: none;
+}
+
+.form--lastStep.theme--seaBlue {
+	background: #6aeee5;
+}
+
+.form--lastStep.theme--pink {
+	background: #f59dff;
+}
+
+.form--lastStep.theme--pink img {
+  width: 15rem;
+}
+
+.form--lastStep.theme--blue {
+	background: #d8eeff;
+}
+
+.form--lastStep.theme--rose {
+	background: #f5a6a8;
+}
+
+.form--lastStep.theme--yellow {
+	background: #f5f097;
+}
+
+.form--lastStep.theme--yellow img {
+  width: 11rem;
+}
+
+img.img-responsive.i-social {
+  width: 5rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 4rem 0;
+}
+
+.form--lastStep.theme--green {
+	background: #bffab5;
+}
+
+.form--lastStep img {
+  width: 20rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+
+
+/*********************************************************
+**                                                      **
+**                 x. Extras                            **
+**                                                      **
+*********************************************************/
+
+.banner--benefits {
+	margin-top: 6rem;
+}
+
+/* States */ 
+.is-hidden {
+  display: none;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.v-error {
+  position: absolute;
+  font-size: 1rem;
+  color: #c70505;
+  left: 1.8rem;
+  bottom: -1.2rem;
+}
+
+.fullWidthButton {
+  width: 100%;
+}
+
+.state, .city, .btnCedis, #cedisList, .cedis, .shopping {
+	display: none;
+}
+
+.is-odd {
+	background: #f9f9f9;
+}
+
+.cedis--title {
+	margin-bottom: 4rem;
+	text-align: left;
+}
+
+div#addressShopping {
+    margin-top: 2rem;
+}
+
+/*********************************************************
+**                                                      **
+**                 x. Animation                         **
+**                                                      **
+*********************************************************/
+
+/* Animations Keyframes */ 
+@-webkit-keyframes 
+  cardEnter {  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes
+  cardEnter {  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes inputHighlighter {
+  from { background:#7c3f91; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#7c3f91; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 680px) {
+	.benefits--container {
+		display: none;
+	}
+
+	.form--container.container,
+	form#regForm {
+		width: 100%;
+	}
+}
