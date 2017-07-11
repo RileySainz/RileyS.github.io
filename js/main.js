@@ -1,23 +1,21 @@
 var onDocumentReady = function() {
-	var sponsorNumber = $('#sponsorNumber'),
-	    sponsorName   = $('#sponsorName'),
-	    state         = $('#state'),
-	    city          = $('#city'),
-	    btnCedis      = $('.btnCedis'),
-	    cedis         = $('.cedis'),
-	    cedisList     = $('#cedisList'),
-	    addressShopping = $('.shopping');
+	var sponsor         = $('#sponsorContainer'),
+	    state           = $('#state'),
+	    city            = $('#city'),
+	    btnCedis        = $('#showCEDIS'),
+	    cedis           = $('.cedis'),
+	    cedisList       = $('#cedisList'),
+	    addressShopping = $('#shopping'),
+	    progressbar     = $('.c-form--progressbar li');
   
   $("input[type='radio']").click(function() {
-    var sponsorValue = $("input[name='sponsor']:checked").val();
+    var sponsorValue = $("input[name='hasSponsor']:checked").val();
     var cedisValue = $('input[name="cedis"]:checked').val();
 
     if (sponsorValue === 'yes') {
-      sponsorNumber.show(1000);
-      sponsorName.show(1000);
+      sponsor.show(1000);
     } else {
-      sponsorNumber.hide(1000);
-      sponsorName.hide(1000);
+      sponsor.hide(1000);
     }
 
     if (cedisValue === 'yes') {
@@ -68,24 +66,28 @@ var onDocumentReady = function() {
   	banner.css({
   		'background': "url('img/banner-header2.png')"
   	});
+  	progressbar.removeClass('t-orange-progress').addClass('t-cyan-progress').css({'width': '66.66666%'});
   });
 
   secondStep.on('click', function () {
-  	banner.css({
+  	banner.addClass({
   		'background': "url('img/banner-header3.png')"
   	});
+  	progressbar.removeClass('t-cyan-progress').addClass('t-red-progress').css({'width': '100%'});
   });
 
   previousFirstStep.on('click', function () {
   	banner.css({
   		'background': "url('img/banner-header.png')"
   	});
+  	progressbar.removeClass('t-cyan-progress').addClass('t-orange-progress').css({'width': '33.3333%'});
   });
 
   previousSecondStep.on('click', function () {
   	banner.css({
   		'background': "url('img/banner-header2.png')"
   	});
+  	progressbar.removeClass('t-red-progress').addClass('t-cyan-progress').css({'width': '66.66666%'});
   });
 
   confirmPayment.on('click', function () {

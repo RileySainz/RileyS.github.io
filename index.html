@@ -3,74 +3,76 @@
   <head>
 	  <meta charset="UTF-8">
 	  <title>Afíliate - Omnilife</title>
-	  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/8c108ccc3e.js"></script>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-		<div class="form--container container">
-			<form id="regForm" class="regForm">
+		<div class="l-form container">
+			<form id="form" class="o-form" method="" action="">
 		    <!-- Progress Bar -->
-		    <div class="form--banner"></div>
-		    <ul id="form--progressBar" class="form--progressBar">
-		  	  <li></li>
+		    <div class="c-form--banner"></div>
+		    <ul id="form--progressBar" class="c-form--progressbar">
+		  	  <li class="t-orange-progress"></li>
 		    </ul>
 		    <!-- End of Progress Bar -->
 
 		    <!-- First Step -->
-		    <fieldset class="form__step">
+		    <fieldset class="o-step">
 		  	  <div class="col-md-8">
-			  	  <div class="form__step--sponsor">
+			  	  <div class="l-select-sponsor">
 			  	    <h2 class="form--title">Queremos saber de ti</h2>
 			  	    <hr class="form--line">
-			  		  <h4>¿Cuentas con Patrocinador?</h4>
+			  		  <h4 class="title">¿Cuentas con Patrocinador?</h4>
 			  		  <label>
-			  			  <input type="radio" class="sponsorButton" name="sponsor" checked value="yes">
-			  			  <div class="is-selected box">
+			  			  <input id="si" type="radio" class="c-sponsor__btn" name="hasSponsor" checked value="yes">
+			  			  <div class="has-sponsor box">
 			  				  <span>Sí</span>
 			  			  </div>
 			  		  </label>
 
 			  		  <label>
-			  			  <input type="radio" class="sponsorButton" name="sponsor" value="no">
-			  			  <div class="is-not-selected box">
+			  			  <input id="no" type="radio" class="c-sponsor__btn" name="hasSponsor" value="no">
+			  			  <div class="has-no-sponsor box">
 			  				  <span>No</span>
 			  			  </div>
 			  		  </label>
 			  	  </div>
 
-			  		<!-- Sponsors -->
-			  		<div class="form--section">
-			  			<div class="form--section__sponsors col-md-12" id="sponsorNumber">
-			  				<div class="group">
-			  					<input type="text" name="sponsorNumber" required>
-			  					<span class="highlight"></span>
-			  					<span class="bar"></span>
-			  					<label class="label">Número de Empresario Omnilife (Patrocinador)</label>
-			  				</div>
-			  			</div>
-			  		</div>
-			  		<!-- End of Sponsors -->
+			  		<div class="l-sponsor--container" id="sponsorContainer">
+			  			<!-- Sponsors -->
+				  		<div class="l-sponsor">
+				  			<div class="o-sponsor col-md-12">
+				  				<div class="c-group">
+				  					<input type="text" name="sponsorNumber" id="sponsorNumber" required>
+				  					<span class="highlight"></span>
+				  					<span class="bar"></span>
+				  					<label class="label">Número de Empresario Omnilife (Patrocinador)</label>
+				  				</div>
+				  			</div>
+				  		</div>
+				  		<!-- End of Sponsors -->
 
-			  		<!-- Sponsors -->
-			  		<div class="form--section">
-			  			<div class="form--section__sponsors col-md-12" id="sponsorName">
-			  				<div class="group">
-			  					<input type="text" name="sponsorNumber" required>
-			  					<span class="highlight"></span>
-			  					<span class="bar"></span>
-			  					<label class="label">Nombre de Empresario Omnilife (Patrocinador)</label>
-			  				</div>
-			  			</div>
+				  		<!-- Sponsors -->
+				  		<div class="l-sponsor">
+				  			<div class="o-sponsor col-md-12" id="sponsorName">
+				  				<div class="c-group">
+				  					<input type="text" name="sponsorName" id="sponsorName" required>
+				  					<span class="highlight"></span>
+				  					<span class="bar"></span>
+				  					<label class="label">Nombre de Empresario Omnilife (Patrocinador)</label>
+				  				</div>
+				  			</div>
+				  		</div>
+				  		<!-- End of Sponsors -->
 			  		</div>
-			  		<!-- End of Sponsors -->
 
-						<!-- Names Section -->
-			  		<div class="form--section__names">
+						<!-- Personal Info -->
+			  		<div class="l-personal-info">
 			  			<!-- First Name -->
 			  	  	<div class="col-md-12 col-xs-12 col-ls-12">
-			  	  		<div class="group">
+			  	  		<div class="c-group">
 			  	  			<input type="text" name="firstName" required>
 			  	  			<span class="highlight"></span>
 			  	  			<span class="bar"></span>
@@ -81,7 +83,7 @@
 
 							<!-- Last Name -->
 			  	  	<div class="col-md-6 col-xs-12 col-ls-12">
-			  	  		<div class="group">
+			  	  		<div class="c-group">
 			  	  			<input type="text" name="lastName" required>
 			  	  			<span class="highlight"></span>
 			  	  			<span class="bar"></span>
@@ -92,8 +94,8 @@
 
 			  	  	<!-- Last Name -->
 			  	  	<div class="col-md-6 col-xs-12 col-ls-12">
-			  	  		<div class="group">
-			  	  			<input type="text" name="secondLastName" required>
+			  	  		<div class="c-group">
+			  	  			<input type="text" name="maternalName" required>
 			  	  			<span class="highlight"></span>
 			  	  			<span class="bar"></span>
 			  	  			<label class="label">Apellido Materno</label>
@@ -104,14 +106,14 @@
 			  		<!-- End of Names Section -->
 					
 						<!-- Sex & Birthday Section -->
-				  	<div class="form--section__sex">
-				  		<div class="col-md-12 no-padding select-sex__container">
+				  	<div class="l-select-sex">
+				  		<div class="col-md-12 no-padding">
 				  			<div class="col-md-6">
-				  				<div class="selectSex">
+				  				<div class="o-select-sex">
 				  					<h4>Sexo: </h4>
 
 				  					<!-- Select Female Option -->
-				  					<label class="selectSexRadio">
+				  					<label class="c-select-sex">
 				  						<input type="radio" name="sexRadio" value="female" checked>
 				  						<span class="outer">
 				  							<span class="inner"></span>
@@ -121,7 +123,7 @@
 				  					<!-- End of Female Option -->
 
 										<!-- Select Male Option -->
-				  					<label class="selectSexRadio">
+				  					<label class="c-select-sex">
 				  						<input type="radio" name="sexRadio" value="male">
 				  						<span class="outer">
 				  							<span class="inner"></span>
@@ -133,8 +135,8 @@
 				  			</div>
 
 				  			<div class="col-md-6">
-				  				<label class="form--birthday">Fecha de Nacimiento</label>
-				  				<input type="date" name="birthday" required="">
+				  				<label class="c-birthday">Fecha de Nacimiento</label>
+				  				<input type="date" name="birthday" required>
 				  			</div>
 				  		</div>
 				  	</div>
@@ -144,7 +146,7 @@
 						<div class="form--section__personalInfo">
 							<!-- Phone -->
 							<div class="col-md-12 col-xs-12 col-ls-12">
-								<div class="group">
+								<div class="c-group">
 									<input type="tel" name="phone" required>
 									<span class="highlight"></span>
 									<span class="bar"></span>
@@ -154,8 +156,8 @@
 							<!-- End of Phone -->
 
 							<!-- Email -->
-							<div class="col-md-6 col-xs-12 col-ls-12 ">
-								<div class="group">
+							<div class="col-md-6 col-xs-12 col-ls-12 u-margin-bottom">
+								<div class="c-group">
 									<input type="email" name="email" required>
 									<span class="highlight"></span>
 									<span class="bar"></span>
@@ -167,7 +169,7 @@
 
 							<!-- Confirm Email -->
 							<div class="col-md-6 col-xs-12 col-ls-12">
-								<div class="group">
+								<div class="c-group">
 									<input type="email" name="confirmEmail" required>
 									<span class="highlight"></span>
 									<span class="bar"></span>
@@ -180,35 +182,35 @@
 						<!-- End of Personal Info -->
 					</div>
 
-					<div class="col-md-4 benefits--container">
-						<img src="img/banner-beneficios.png" alt="" class="img-responsive banner--benefits">
+					<div class="col-md-4 o-benefits">
+						<img src="img/banner-beneficios.png" alt="" class="img-responsive c-banner-benefits">
 					</div>
 
-					<input type="button" id="btnFirstStep" class="next action-button fullWidthButton theme--purple" value="Siguiente">
+					<input type="button" id="btnFirstStep" class="next action-button fullWidthButton t-purple" value="Siguiente">
 		  	</fieldset>
 		  	<!-- End of First Step -->
 
 		  	<!-- Second Step -->
-		  	<fieldset class="form__step">
-		  		<h4 class="selectKit--title">Selecciona el kit y compañía de envío</h4>
+		  	<fieldset class="o-step">
+		  		<h4 class="c-selectKit--title">Selecciona el kit y compañía de envío</h4>
 		  		<div class="col-md-12">
-	  				<hr class="form--line kit">
+	  				<hr class="c-line kit">
 	  			</div>
-		  		<div class="col-md-12 no-padding select-kit__container">
+		  		<div class="col-md-12 no-padding">
 		  		  <!-- Kit Omnilife -->
 		  			<div class="col-md-4 col-xs-12 col-ls-12 selectKit">
-		  				<figure class="figure form--product theme--cyan">
+		  				<figure class="figure c-kit--product t-cyan">
 		  					<img src="img/mochila.png" alt="" class="img-responsive">
 		  				</figure>
-		  				<label class="selectKitMaletinRadio">
+		  				<label class="c-select-kit">
 		  					<input type="radio" name="kit" value="kitNutricional" checked>
             		<span class="outer">
               		<span class="inner"></span>
             		</span>
             		Kit Maletín Nutricional Web
 		  				</label>
-		  				<h4 class="kit--title">Contiene:</h4>
-		  				<div class="kit--list">
+		  				<h4 class="c-kit__title">Contiene:</h4>
+		  				<div class="c-kit--list">
 		  					<li>&bull; Mochila</li>
 		  					<li>&bull; Omniguía</li>
 		  					<li>&bull; Guía Práctica Omnilife</li>
@@ -221,10 +223,10 @@
      
             <!-- Kit SeyTú -->
 		  			<div class="col-md-4 col-xs-12 col-ls-12">
-		  				<figure class="form--product theme--orange">
+		  				<figure class="c-kit--product t-orange">
 		  					<img src="img/bolso.png" alt="" class="img-responsive">
 		  				</figure>
-		  				<label class="selectKitMaletinRadio">
+		  				<label class="c-select-kit">
 		  					<input type="radio" name="kit" value="kitSeyTu">
             		<span class="outer">
               		<span class="inner"></span>
@@ -232,8 +234,8 @@
             		Kit SeyTú Web
 		  				</label>
 
-		  				<h4 class="kit--title">Contiene:</h4>
-		  				<div class="kit--list">
+		  				<h4 class="c-kit__title"">Contiene:</h4>
+		  				<div class="c-kit--list">
 		  					<li>&bull; Bolso Kit SeyTú</li>
 		  					<li>&bull; Catálogo</li>
 		  					<li>&bull; Estuche Emprende</li>
@@ -243,10 +245,10 @@
 		  			</div>
 
 		  			<div class="col-md-4 col-xs-12 col-ls-12">
-		  				<figure class="form--product theme--cyan">
+		  				<figure class="c-kit--product t-red--nfuerza">
 		  					<img src="img/mochila.png" alt="" class="img-responsive">
 		  				</figure>
-		  				<label class="selectKitMaletinRadio">
+		  				<label class="c-select-kit">
 		  					<input type="radio" name="kit" value="kitNFuerza">
             		<span class="outer">
               		<span class="inner"></span>
@@ -254,8 +256,8 @@
             		Kit NFuerza
 		  				</label>
 
-		  				<h4 class="kit--title">Contiene:</h4>
-		  				<div class="kit--list">
+		  				<h4 class="c-kit__title">Contiene:</h4>
+		  				<div class="c-kit--list">
 		  					<li>&bull; Kit NFuerza</li>
 		  					<li>&bull; Catálogo</li>
 		  					<li>&bull; Estuche Emprende</li>
@@ -266,15 +268,15 @@
 		  		</div>
 		  		<!-- End of Kit SeyTú -->
 
-		  		<div class="col-md-12 process--title">
+		  		<div class="col-md-12 c-kit-shipping ">
 		  			<h4 class="text-left ">Selecciona el método de envío de tu Kit de preferencia: </h4>
-		  			<hr class="form--line">
+		  			<hr class="c-line">
 		  		</div>
 
 					<!-- Company -->
-		  		<div class="col-md-4 company text-left">
+		  		<div class="col-md-4 l-company text-left">
 		  			<div class="col-md-12 col-xs-12 col-ls-12 selectCompany">
-		  				<label class="selectCompanyRadio">
+		  				<label class="c-select-company">
             		<input type="radio" name="cedis" id="cedis" value="yes">
             		<span class="outer">
               		<span class="inner"></span>
@@ -283,7 +285,7 @@
           		</label>
 		  			</div>
 		  			<div class="col-md-12 col-xs-12 col-ls-12">
-		  				<label class="selectCompanyRadio">
+		  				<label class="c-select-company">
             		<input type="radio" name="cedis" id="house" value="no">
             		<span class="outer">
               		<span class="inner"></span>
@@ -294,39 +296,40 @@
 		  		</div>
 		  		<!-- End of Company -->
 
-		  		<div class="col-md-8 options--container">
-		  			<div class="cedis">
-		  				<!-- Secret Question -->
+		  		<div class="col-md-8 l-shipping-info">
+		  			<div class="cedis" id="cedis">
+		  				<!-- State -->
 							<div class="col-md-4 col-xs-12">
-								<select name="secretQuestion" id="state" class="secretQuestion state">
+								<select name="selectState" id="state" class="c-state">
 									<option value="" disabled selected>Selecciona tu estado:</option>
 									<option value="1">Aguascalientes</option>
 									<option value="2">Baja California</option>
 									<option value="3">Baja California Sur</option>
 								</select>
 							</div>
-							<!-- End of Secret Question -->
+							<!-- End of State -->
 
-							<!-- Answer for Secret Question -->
+							<!-- Select City -->
 							<div class="col-md-4 col-ls-12">
-								<select name="secretQuestion" id="city" class="secretQuestion city">
+								<select name="secretQuestion" id="city" class="c-city">
 									<option value="" disabled selected>Selecciona tu ciudad:</option>
 									<option value="1">La Paz</option>
 									<option value="2">Cabo San Lucas</option>
 									<option value="3">Loreto</option>
 								</select>
 							</div>
+							<!-- End of City -->
 
-							<div class="col-md-4 cedis--container">
-								<input type="button" name="showCEDIS" id="showCEDIS" class="btnCedis action-button theme--purple" value="Mostrar CEDIS">
+							<div class="col-md-4 u-cedis--container">
+								<input type="button" name="showCEDIS" id="showCEDIS" class="btnCedis action-button t-purple" value="Mostrar CEDIS">
 							</div>
 			  		</div>
 
-						<div class="shopping">
+						<div class="l-shopping shopping" id="shopping">
 							<!-- Address Shopping -->
 							<!-- Address -->
 							<div class="col-md-12 col-xs-12 col-ls-12">
-								<div class="group">
+								<div class="c-group">
 									<input type="text" name="address" required>
 									<span class="highlight"></span>
 									<span class="bar"></span>
@@ -337,7 +340,7 @@
 							
 							<!-- Address -->
 							<div class="col-md-12 col-xs-12 col-ls-12">
-								<div class="group">
+								<div class="c-group">
 									<input type="text" name="addressLocation" required>
 									<span class="highlight"></span>
 									<span class="bar"></span>
@@ -349,7 +352,7 @@
 							<!-- Location -->
 							<div class="col-md-12 col-xs-12 col-ls-12 no-padding">
 								<div class="col-md-6 col-xs-12 col-ls-12">
-									<div class="group">      
+									<div class="c-group">      
 	          				<input type="text" name="colony" required>
 	          				<span class="highlight"></span>
 	          				<span class="bar"></span>
@@ -358,7 +361,7 @@
 								</div>
 
 								<div class="col-md-6 col-xs-12 col-ls-12">
-									<div class="group">      
+									<div class="c-group">      
 	          				<input type="text" name="postalCode" required>
 	          				<span class="highlight"></span>
 	          				<span class="bar"></span>
@@ -369,9 +372,9 @@
 							<!-- End of Location -->
 
 							<!-- City & State -->
-							<div class="col-md-12 col-xs-12 col-ls-12 no-padding form--state">
+							<div class="col-md-12 col-xs-12 col-ls-12 no-padding u-margin-bottom">
 								<div class="col-md-6 col-xs-12 col-ls-12">
-			          	<div class="group">      
+			          	<div class="c-group">      
 			          		<input type="text" name="state" required>
 			          		<span class="highlight"></span>
 			          		<span class="bar"></span>
@@ -380,7 +383,7 @@
 	        			</div> 
 
 	        			<div class="col-md-6 col-xs-12 col-ls-12">
-			          	<div class="group">      
+			          	<div class="c-group">      
 			          		<input type="text" name="city" required>
 			          		<span class="highlight"></span>
 			          		<span class="bar"></span>
@@ -393,87 +396,86 @@
 
 		  		</div>
 
-		  		<div class="col-md-12 cedis--list" id="cedisList">
-		  			<h4 class="cedis--title">Selecciona el CEDIS que te quede más cerca:</h4>
-		  			<div class="col-md-12 col-xs-12 col-ls-12 selectCompany text-left is-odd">
-		  				<label class="selectCompanyRadio">
-		            		<input type="radio" name="company" value="dhl">
-		            		<span class="outer">
-		              		<span class="inner"></span>
-		            		</span>
-		            		RLIDERES 3D - DAVID A. SIQUEIROS 489 L-6 LAS GLORIAS
-		          		</label>
+					<!-- List of CEDIS -->
+		  		<div class="col-md-12 c-cedis--list" id="cedisList">
+		  			<h4 class="c-cedis--list__title">Selecciona el CEDIS que te quede más cerca:</h4>
+		  			<div class="col-md-12 col-xs-12 col-ls-12 text-left is-odd">
+		  				<label class="c-select-cedis">
+            		<input type="radio" name="company" value="dhl">
+            		<span class="outer">
+              		<span class="inner"></span>
+            		</span>
+            		RLIDERES 3D - DAVID A. SIQUEIROS 489 L-6 LAS GLORIAS
+          		</label>
 			  		</div>
 
 			  		<div class="col-md-12 col-xs-12 col-ls-12 text-left">
-			  			<label class="selectCompanyRadio">
-		            		<input type="radio" name="company" value="estafeta">
-		            		<span class="outer">
-		              		<span class="inner"></span>
-		            		</span>
-		            		"REALIZANDO SUEOS" - REVOLUCION 160 EL PITILLAL
-		          		</label>
+			  			<label class="c-select-cedis">
+            		<input type="radio" name="company" value="estafeta">
+            		<span class="outer">
+              		<span class="inner"></span>
+            		</span>
+            		"REALIZANDO SUEOS" - REVOLUCION 160 EL PITILLAL
+          		</label>
 			  		</div>	
 
 			  		<div class="col-md-12 col-xs-12 col-ls-12 selectCompany text-left is-odd">
-		  				<label class="selectCompanyRadio">
-		            		<input type="radio" name="company" value="dhl">
-		            		<span class="outer">
-		              		<span class="inner"></span>
-		            		</span>
-		            		RLIDERES 3D - DAVID A. SIQUEIROS 489 L-6 LAS GLORIAS
-		          		</label>
+		  				<label class="c-select-cedis">
+            		<input type="radio" name="company" value="dhl">
+            		<span class="outer">
+              		<span class="inner"></span>
+            		</span>
+            		RLIDERES 3D - DAVID A. SIQUEIROS 489 L-6 LAS GLORIAS
+          		</label>
 			  		</div>
 
 			  		<div class="col-md-12 col-xs-12 col-ls-12 text-left">
-			  			<label class="selectCompanyRadio">
-		            		<input type="radio" name="company" value="estafeta">
-		            		<span class="outer">
-		              		<span class="inner"></span>
-		            		</span>
-		            		"REALIZANDO SUEOS" - REVOLUCION 160 EL PITILLAL
-		          		</label>
+			  			<label class="c-select-cedis">
+            		<input type="radio" name="company" value="estafeta">
+            		<span class="outer">
+              		<span class="inner"></span>
+            		</span>
+            		"REALIZANDO SUEOS" - REVOLUCION 160 EL PITILLAL
+          		</label>
 			  		</div>	
 
 			  		<div class="col-md-12 col-xs-12 col-ls-12 selectCompany text-left is-odd">
-		  				<label class="selectCompanyRadio">
-		            		<input type="radio" name="company" value="dhl">
-		            		<span class="outer">
-		              		<span class="inner"></span>
-		            		</span>
-		            		RLIDERES 3D - DAVID A. SIQUEIROS 489 L-6 LAS GLORIAS
-		          		</label>
+		  				<label class="c-select-cedis">
+            		<input type="radio" name="company" value="dhl">
+            		<span class="outer">
+              		<span class="inner"></span>
+            		</span>
+            		RLIDERES 3D - DAVID A. SIQUEIROS 489 L-6 LAS GLORIAS
+          		</label>
 			  		</div>
 
 			  		<div class="col-md-12 col-xs-12 col-ls-12 text-left">
-			  			<label class="selectCompanyRadio">
-		            		<input type="radio" name="company" value="estafeta">
-		            		<span class="outer">
-		              		<span class="inner"></span>
-		            		</span>
-		            		"REALIZANDO SUEOS" - REVOLUCION 160 EL PITILLAL
-		          		</label>
+			  			<label class="c-select-cedis">
+            		<input type="radio" name="company" value="estafeta">
+            		<span class="outer">
+              		<span class="inner"></span>
+            		</span>
+            		"REALIZANDO SUEOS" - REVOLUCION 160 EL PITILLAL
+          		</label>
 			  		</div>	
-		  			
 		  		</div>
+		  		<!-- End of List -->
 
-		  		
-
-		  		<input type="button" id="btnPreviousFirstStep" name="previous" class="btnPrevious previous action-button theme--cyan" value="Regresar" />
-					<input type="button" id="btnSecondStep" name="next" class="btnNext next action-button theme--purple" value="Siguiente" />
+		  		<input type="button" id="btnPreviousFirstStep" name="previous" class="c-btn btnPrevious previous action-button t-cyan" value="Regresar" />
+					<input type="button" id="btnSecondStep" name="next" class="c-btn btnNext next action-button t-purple" value="Siguiente" />
 		  	</fieldset>
 		 	 	<!-- End of Second Step -->
 
 		  	<!-- Third Step -->
-		  	<fieldset class="form__step">
-		  		<div class="form--payment">
-		  			<h4 class="form--payment__title">Selecciona tu mejor opción de pago</h4>
+		  	<fieldset class="o-step">
+		  		<div class="l-payment">
+		  			<h4 class="o-payment__title">Selecciona tu mejor opción de pago</h4>
 		  			<div class="col-md-12">
 		  				<hr class="form--line">
 		  			</div>
-		  			<p class="form--payment__description">Finaliza tu proceso de afiliación seleccionando tu forma de pago:</p>
+		  			<p class="o-payment__subtitle">Finaliza tu proceso de afiliación seleccionando tu forma de pago:</p>
 		  			<div class="col-md-4 col-md-offset-2">
-	          	<label class="selectPaymentRadio">
+	          	<label class="c-select-payment">
 	            	<input type="radio" name="kit" value="debit" checked>
 	            	<span class="outer">
 	              	<span class="inner"></span>
@@ -482,7 +484,7 @@
 	          	</label>
 	        	</div>
 	        	<div class="col-md-4">
-	          	<label class="selectPaymentRadio">
+	          	<label class="c-select-payment">
 	            	<input type="radio" name="kit" value="credit">
 	            	<span class="outer">
 	              	<span class="inner"></span>
@@ -494,24 +496,24 @@
 	          	<img src="img/bancos.png" alt="" class="img-responsive">
 	        	</div>
 		  		</div>
-		  		<input type="button" id="btnPreviousSecondStep" name="previous" class="btnPrevious previous action-button theme--cyan" value="Regresar" />
-			  	<input type="button" id="btnPayment" name="next" class="btnNext next action-button theme--purple" value="Confirmar Pago">
+		  		<input type="button" id="btnPreviousSecondStep" name="previous" class="c-btn btnPrevious previous action-button t-cyan" value="Regresar" />
+			  	<input type="button" id="btnPayment" name="next" class="c-btn btnNext next action-button t-purple" value="Confirmar Pago">
 		  	</fieldset>
 		  	<!-- End of Third Step -->
 
 		  	<!-- Last Step -->
-		  	<fieldset class="form__step">
-		  		<div class="form--lastStep">
-		  			<h4 class="form--lastStep__title">Conoce más sobre tu negocio</h4>
-		  			<hr class="form--line">
+		  	<fieldset class="o-step">
+		  		<div class="l-business">
+		  			<h4 class="o-business__title">Conoce más sobre tu negocio</h4>
+		  			<hr class="c-line">
 		  			<div class="col-md-12 col-xs-12">
-		  				<div class="form--lastStep__products">
+		  				<div class="o-business--products">
 		  					<img src="img/productos_header.png" alt="" class="img-responsive">
 		  				</div>
 		  			</div>
 
 		  			<div class="col-md-4 col-xs-12">
-		  				<div class="form--lastStep theme--seaBlue">
+		  				<div class="o-business--item t-seaBlue">
 		  					<a href="http://omnilife.com/shopping/">
 		  						<img src="img/banner_1.png" alt="" class="img-responsive">
 		  						<span>Crea tu contraseña y compra</span>
@@ -519,7 +521,7 @@
 		  				</div>
 		  			</div>
 		  			<div class="col-md-4 col-xs-12">
-		  				<div class="form--lastStep theme--pink">
+		  				<div class="o-business--item t-pink">
 		  					<a href="https://www.omnilife.com/login/?ref=zona-de-empresarios" target="_blank">	
 		  						<img src="img/banner_2.png" alt="" class="img-responsive">
 		  						<span>Ingresa a tu zona de empresario</span>
@@ -527,7 +529,7 @@
 		  				</div>
 		  			</div>
 		  			<div class="col-md-4 col-xs-12">
-		  				<div class="form--lastStep theme--blue">
+		  				<div class="o-business--item t-blue">
 		  					<a href="http://omnilife.com/cresiendo" target="_blank">
 		  						<img src="img/banner_3.png" alt="" class="img-responsive">
 		  						<span>Conoce CreSiendo</span>
@@ -535,7 +537,7 @@
 		  				</div>
 		  			</div>
 						<div class="col-md-4 col-xs-12">
-		  				<div class="form--lastStep theme--rose">
+		  				<div class="o-business--item t-rose">
 		  					<a href="https://www.facebook.com/omnilifeoficial" target="_blank">
 		  						<img src="img/fb.png" alt="" class="img-responsive i-social">
 		  					</a>
@@ -552,15 +554,15 @@
 		  				</div>
 		  			</div>	
 		  			<div class="col-md-4 col-xs-12">
-		  				<div class="form--lastStep theme--yellow">
+		  				<div class="o-business--item t-yellow">
 		  					<a href="https://www.facebook.com/groups/EmpresarioOmnilife/" target="_blank">	
-		  						<img src="img/banner_5.png" alt="" class="img-responsive">
+		  						<img src="img/banner_5.png" alt="" class="img-responsive facebook-group">
 		  						<span>Únete al grupo de Empresarios</span>
 		  					</a>
 		  				</div>
 		  			</div>
 		  			<div class="col-md-4 col-xs-12">
-		  				<div class="form--lastStep theme--green">
+		  				<div class="o-business--item t-green">
 		  					<a href="https://www.omnilife.com/">
 		  						<img src="img/banner_6.png" alt="" class="img-responsive">
 		  						<span>Visita Omnilife.com</span>

@@ -2,16 +2,26 @@
 *   Project: Afíliate Form                               *
 *   Author: Omar Sainz                                   *
 *   Spacing: 2                                           *
-*   Index                                                *
+*   Namespace List:                                      *
+*     .l-  : Layout                                      *
+*     .o-  : Objects                                     *
+*     .c-  : Components                                  *
+*     .is- / .has : State                                *
+*     .u-  : Utility                                     *
+*     .t-  : Theme                                       *
+*     .qa- : QA                                          *
 *                                                        *
-*   1. Global Styles                                     *
-*   2. Form                                              *
-*   3. Sponsor Section                                   *
-*   4. Inputs                                            *
-*   5. Selects                                           *
-*   6. Text Styles                                       *
-*   7. Forms                                             *
-*   8. Extras                                            *
+*   Index                                                *
+*     1. Global Styles                                   *
+*     2. States                                          *
+*     3. Form                                            *
+*     4. Form Elements                                   *
+*     5. Sponsor                                         *
+*     6. Select Sex                                      *
+*     6. Select Birthday                                 *
+*     7. Forms                                           *
+*     8. Extras                                          *
+*     9. Responsive                                      *
 **********************************************************/
 
 /*********************************************************
@@ -66,138 +76,6 @@ input:focus ~ label, input:valid ~ label    {
 /* Remove focus */
 select:focus { outline: none; }
 
-.form--title {
-  text-align: center;
-  margin: 1rem 0 0 0;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/*********************************************************
-**                                                      **
-**                 2. Form                              **
-**                                                      **
-*********************************************************/
-
-.form--container  {
-	width: 1024px;
-	max-width: 1024px;
-	margin: 0 auto;
-}
-
-.form--banner {
-	background: url('../img/banner-header.png');
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 21rem;
-  margin-top: 2rem;
-}
-
-/* Form Styles */
-.regForm {
-  width: 1024px;
-  text-align: center;
-  position: relative;
-}
-
-.regForm fieldset {
-  background: white;
-  border: 0 none;
-  border-radius: 3px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-  padding: 20px 30px;
-  box-sizing: border-box;
-  width: 100%;
-  position: absolute;
-  margin-bottom: 10rem;
-  margin-top: -1rem;
-}
-
-/* Hide all except first fieldset*/
-.regForm fieldset:not(:first-of-type) {
-  display: none;
-}
-
-/* Inputs inside of Form */
-.regForm input, .regForm textarea {
-  box-sizing: border-box;
-  font-family: 'Open Sans';
-  color: #2C3E50;
-}
-/* Buttons */
-.regForm .action-button {
-  font-weight: bold;
-  color: white;
-  border: 0 none;
-  border-radius: 1px;
-  cursor: pointer;
-  padding: 10px 5px;
-  /* margin: 10px 5px; */
-  margin-top: 2rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.regForm .action-button:hover, .regForm .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
-
-.regForm .action-button.btnPrevious, 
-.regForm .action-button.btnNext,
-.regForm .action-button.btnSubmit {
-  display: inline-block;
-  vertical-align: middle;
-  width: 49%;
-  margin: 4rem 0 0 0;
-}
-
-.form--state {
-	margin-bottom: 8rem;
-}
-
-/* Hide label */
-.mdl-selectfield label {display: none;}
-
-/* Use custom arrow */
-.mdl-selectfield select {appearance: none}
-
-.mdl-selectfield {
-  font-family: 'Open Sans','Helvetica',Arial ,sans-serif;
-  position: relative;
-}
-
-.mdl-selectfield::after {
-  position: absolute;
-  top: 0.75em;
-  right: 0.5em;
-  width: 0;
-  height: 0;
-  padding: 0;
-  content: '';
-  border-left: .25em solid transparent;
-  border-right: .25em solid transparent;
-  border-top: .375em solid $select-border-color;
-  pointer-events: none;
-}
-
-/*headings*/
-.fs-title {
-	font-size: 15px;
-	text-transform: uppercase;
-	color: #2C3E50;
-	margin-bottom: 10px;
-}
-.fs-subtitle {
-	font-weight: normal;
-	font-size: 13px;
-	color: #666;
-	margin-bottom: 20px;
-}
-
 /* Label */ 
 .label {
   color: #666; 
@@ -212,87 +90,199 @@ select:focus { outline: none; }
   -webkit-transition:0.2s ease all;
 }
 
-/*progressbar*/
+/*********************************************************
+**                                                      **
+**                 2. States                            **
+**                                                      **
+*********************************************************/
 
-.form--progressBar {
-	margin-bottom: 30px;
-	overflow: hidden;
-	/*CSS counters to number the steps*/
-	counter-reset: step;
+/* States */ 
+.is-hidden {
+  display: none;
 }
-.form--progressBar li {
-	list-style-type: none;
-  background: #f63350;
-  text-transform: uppercase;
-  font-size: 9px;
+
+.no-padding {
+  padding: 0;
+}
+
+.is-odd {
+	background: #f9f9f9;
+}
+
+.fullWidthButton {
   width: 100%;
-  float: left;
-  position: relative;
-  display: inline-block;
-  height: 3rem;
-  border-radius: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 0rem;
-}
-#progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 20px;
-	line-height: 20px;
-	display: block;
-	font-size: 10px;
-	color: #333;
-	background: white;
-	border-radius: 3px;
-	margin: 0 auto 5px auto;
-}
-/*progressbar connectors*/
-#progressbar li:after {
-	content: '';
-	width: 100%;
-	height: 20px;
-	background: white;
-	position: absolute;
-	left: -50%;
-	top: 0px;
-	z-index: -1; /*put it behind the numbers*/
-}
-#progressbar li:first-child:after {
-	/*connector not needed before the first step*/
-	content: none; 
-}
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active:before,  #progressbar li.active:after {
-	background: #27AE60;
-	color: white;
 }
 
-/* Sponsor Section */ 
-.group {
-  padding: 1rem 0;
+.v-error {
+  position: absolute;
+  font-size: 1rem;
+  color: #c70505;
+  left: 1.8rem;
+  bottom: -1.2rem;
+}
+
+.u-margin-bottom{
+	margin-bottom: 8rem;
 }
 
 /*********************************************************
 **                                                      **
-**                 3. Sponsor Section                   **
+**                 3. Form                              **
+**                                                      **
+*********************************************************/
+.l-form  {
+	width: 1024px;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.o-form {
+  width: 1024px;
+  text-align: center;
+  position: relative;
+}
+
+.o-form fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin-bottom: 10rem;
+  margin-top: -1rem;
+}
+
+/* Hide all except first fieldset*/
+.o-form fieldset:not(:first-of-type) {
+  display: none;
+}
+
+.c-form--banner {
+	background: url('../img/banner-header.png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 21rem;
+  margin-top: 2rem;
+}
+
+.c-form--title {
+  text-align: center;
+  margin: 1rem 0 0 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.c-banner-benefits {
+	margin-top: 6rem;
+	margin-bottom: 8rem;
+}
+
+.c-selectKit--title {
+  margin-bottom: -13px;
+}
+
+.c-line.kit {
+  width: 97%;
+  margin: 20px auto;
+}
+
+/*********************************************************
+**                                                      **
+**                 4. Form Elements                     **
 **                                                      **
 *********************************************************/
 
-.form--section__sponsors {
-  position: relative;
+/* Progressbar */ 
+.c-form--progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  counter-reset: step;
+  height: 3rem;
+  width: 100%;
+  background: #e2e0e0;
   margin-top: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
 }
 
+.c-form--progressbar li {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33333%;
+  float: left;
+  position: relative;
+  display: inline-block;
+  height: 3rem;
+  border-radius: 1rem;
+  margin-bottom: 0rem;
+}
+
+/* Inputs inside of Form */
+.o-form input, .o-form textarea {
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+  color: #2C3E50;
+}
+/* Buttons */
+.o-form .action-button {
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.o-form .action-button.t-purple {
+  background: #7c3f91;
+}
+
+.o-form .action-button:hover, .o-form .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+.o-form .action-button.btnPrevious, 
+.o-form .action-button.btnNext,
+.o-form .action-button.btnSubmit {
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
+  margin: 4rem 0 0 0;
+}
+
+.o-form .c-btn  {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+/*********************************************************
+**                                                      **
+**                 5. Sponsor                           **
+**                                                      **
+*********************************************************/
 /* Select Sponsor */
-.form__step--sponsor {
+.l-select-sponsor {
   text-align: left;
   margin-left: 1.5rem;
 }
 
-.form__step--sponsor label { vertical-align: middle; }
+.l-select-sponsor label { vertical-align: middle; }
 
-.form__step--sponsor h4 {
+.l-select-sponsor .title {
   display: inline-block;
   vertical-align: middle;
   margin-right: 2rem;
@@ -301,7 +291,7 @@ select:focus { outline: none; }
   font-weight: normal;
 }
 
-.form__step--sponsor .box {
+.l-select-sponsor .box {
   width: 70px;
   height: 50px;
   background-color: #eee;
@@ -313,12 +303,12 @@ select:focus { outline: none; }
   position: relative;
   font-weight: 900;
 }
-    
+
 .box:active{
   transform: translateY(10px);
 }
 
-.form__step--sponsor .box span {
+.l-select-sponsor .box span {
   position: absolute;
   transform: translate(0, 7px);
   left: 0;
@@ -329,7 +319,7 @@ select:focus { outline: none; }
   color: #666;
 }
 
-.form__step--sponsor .box span::before {
+.l-select-sponsor .box span::before {
   font-size: 1.2em;
   font-family: FontAwesome;
   display: block;
@@ -340,61 +330,69 @@ select:focus { outline: none; }
   color: #666;
 }
 
-.form__step--sponsor .is-not-selected span::before {
+.l-select-sponsor .has-sponsor span::before {
   content: '\f183';
   color: #fff;
 }
 
-.form__step--sponsor .is-selected span::before {
+.l-select-sponsor .has-no-sponsor span::before {
   content: '\f183';
   color: #fff;
 }
 
-.form__step--sponsor input[type="radio"] {
+.l-select-sponsor input[type="radio"] {
   display: none;
 }
 
-.form__step--sponsor input[type="radio"]:checked + .is-selected.box {
+.l-select-sponsor input[type="radio"]:checked + .has-sponsor.box {
   background-color: #7c3f91;
 }
 
-.form__step--sponsor input[type="radio"]:checked + .is-not-selected.box {
+.l-select-sponsor input[type="radio"]:checked + .has-no-sponsor.box {
   background-color: #f63350;
 }
 
-.form__step--sponsor input[type="radio"]:checked + .box span {
+.l-select-sponsor input[type="radio"]:checked + .box span {
   color: white;
   transform: translateY(7px);
 }
 
-.form__step--sponsor input[type="radio"]:checked + .box span::before {
+.l-select-sponsor input[type="radio"]:checked + .box span::before {
   transform: translateY(0px);
   opacity: 1;
 }
 
-.form__step--sponsor input[type="radio"]:checked + .box span::before {
+.l-select-sponsor input[type="radio"]:checked + .box span::before {
   transform: translateY(0px);
   opacity: 1;
 }
 
+/* Sponsor Item */ 
+.l-sponsor {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.o-sponsor {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.c-group {
+  padding: 1rem 0;
+}
+
+/*********************************************************
+**                                                      **
+**                 6. Select Sex                        **
+**                                                      **
+*********************************************************/
 /* Select Sex */ 
-.selectSex {
+.o-select-sex {
 	width: 100%;
 }
 
-.selectSexRadio,
-.selectKitMaletinRadio,
-.selectCompanyRadio,
-.selectPaymentRadio {
-  display: inline-block;
-  padding-right: 7px;
-  font-size: 13px;
-  line-height: 40px;
-  cursor: pointer;
-  vertical-align: middle;
-}
-
-.selectSex h4 {
+.o-select-sex h4 {
   color: #666;
   font-size: 13px;
   font-weight: normal;
@@ -403,30 +401,45 @@ select:focus { outline: none; }
   margin-left: -2rem;
 }
 
-.selectSexRadio:hover .inner,
-.selectKitMaletinRadio:hover .inner,
-.selectCompanyRadio:hover .inner,
-.selectPaymentRadio:hover .inner {
+.c-select-sex,
+.c-select-kit,
+.c-select-company,
+.c-select-cedis,
+.c-select-payment {
+  display: inline-block;
+  padding-right: 7px;
+  font-size: 13px;
+  line-height: 40px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.c-select-sex:hover .inner,
+.c-select-kit:hover .inner,
+.c-select-cedis:hover .inner,
+.c-select-company:hover .inner,
+.c-select-payment :hover .inner {
   -webkit-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
   opacity: .5;
 }
 
-.selectSexRadio input,
-.selectKitMaletinRadio input,
-.selectCompanyRadio input,
-.selectPaymentRadio input {
+.c-select-sex input,
+.c-select-kit input,
+.c-select-company input,
+.c-select-cedis input,
+.c-select-payment  input {
   width: 1px;
   height: 1px;
   opacity: 0;
 }
 
-
-.selectSexRadio input:checked + .outer .inner,
-.selectKitMaletinRadio input:checked + .outer .inner,
-.selectCompanyRadio input:checked + .outer .inner,
-.selectPaymentRadio input:checked + .outer .inner {
+.c-select-sex input:checked + .outer .inner,
+.c-select-kit input:checked + .outer .inner,
+.c-select-company input:checked + .outer .inner,
+.c-select-cedis input:checked + .outer .inner,
+.c-select-payment input:checked + .outer .inner {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -437,23 +450,26 @@ select:focus { outline: none; }
   margin-top: 1px;
 }
 
-.selectSexRadio input:checked + .outer { 
+.c-select-sex input:checked + .outer { 
 	border: 3px solid #f08b3b; animation: cardEnter;
 }
 
-.selectKitMaletinRadio input:checked + .outer,
-.selectCompanyRadio input:checked + .outer { 
+.c-select-kit input:checked + .outer,
+.c-select-company input:checked + .outer,
+.c-select-cedis input:checked + .outer { 
 	border: 3px solid #79efd7; animation: cardEnter;
 }
 
-.selectPaymentRadio input:checked + .outer {
+.c-select-payment input:checked + .outer {
 	border: 3px solid #f63350; animation: cardEnter;
 }
+
  
-.selectSexRadio input:focus + .outer .inner,
-.selectKitMaletinRadio input:focus + .outer .inner,
-.selectCompanyRadio input:focus + .outer .inner,
-.selectPaymentRadio input:focus + .outer .inner {
+.c-select-sex input:focus + .outer .inner,
+.c-select-kit input:focus + .outer .inner,
+.c-select-company input:focus + .outer .inner,
+.c-select-cedis input:focus + .outer .inner,
+.c-select-payment input:focus + .outer .inner {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -462,19 +478,20 @@ select:focus { outline: none; }
   animation: cardEnter;
 }
 
-.selectKitMaletinRadio input:focus + .outer .inner,
+.c-select-kit input:focus + .outer .inner,
 .selectCompanyRadio input:focus + .outer .inner {
 	background-color: #79efd7;
 }
 
-.selectPaymentRadio input:focus + .outer .inner {
+.c-select-payment input:focus + .outer .inner {
 	background-color: #f63350;
 }
 
-.selectSexRadio .outer,
-.selectKitMaletinRadio .outer,
-.selectCompanyRadio .outer, 
-.selectPaymentRadio .outer {
+.c-select-sex .outer,
+.c-select-kit .outer,
+.c-select-company .outer, 
+.c-select-cedis .outer,
+.c-select-payment .outer {
   width: 20px;
   height: 20px;
   display: block;
@@ -485,19 +502,21 @@ select:focus { outline: none; }
   background-color: #fff;
 }
 
-.selectKitMaletinRadio .outer,
-.selectCompanyRadio .outer {
+.c-select-kit .outer,
+.c-select-company .outer,
+.c-select-cedis .outer {
   border: 3px solid #79efd7;	
 }
 
-.selectPaymentRadio .outer {
+.c-select-payment .outer {
 	border: 3px solid #f63350;
 }
 
-.selectSexRadio .inner,
-.selectKitMaletinRadio .inner,
-.selectCompanyRadio .inner,
-.selectPaymentRadio .inner {
+.c-select-sex .inner,
+.c-select-kit .inner,
+.c-select-company .inner,
+.c-select-cedis .inner,
+.c-select-payment .inner {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   width: 12px;
@@ -512,33 +531,27 @@ select:focus { outline: none; }
   opacity: 0;
 }
 
-.selectKitMaletinRadio .inner,
-.selectCompanyRadio .inner  {
+.c-select-kit .inner,
+.c-select-company .inner,
+.c-select-cedis .inner {
 	background-color: #79efd7;
 }
 
-.selectPaymentRadio .inner {
+.c-select-payment .inner {
 	border: 3px solid #f63350;
 	background-color: #f63350;
 }
 
-/*buttons*/
-.o--afiliateForm .c--btnNext {
-  width: 100%;
-  background: #7c3f91;
-  font-weight: bold;
-  color: white;
-  border: 0 none;
-  border-radius: 1px;
-  cursor: pointer;
-  padding: 10px 5px;
-  margin: 10px 5px;
-}
-#afiliateForm .action-button:hover, #afiliateForm .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+.c-select-company img {
+	width: 14rem;
+	margin-top: .8rem;
 }
 
-
+/*********************************************************
+**                                                      **
+**                 7. Select Birthday                   **
+**                                                      **
+*********************************************************/
 
 /* Select Date - Birthday */ 
 .l--birthday, input[type="date"] {
@@ -546,15 +559,8 @@ select:focus { outline: none; }
   vertical-align: middle;
 }
 
-label.form--birthday {
+label.c-birthday {
   font-size: 13px;
-}
-
-label.c--birthday {
-  display: inline-block;
-  vertical-align: middle;
-  float: left;
-  margin: 1.5rem 0;
 }
 
 input[type="date"] {
@@ -566,190 +572,106 @@ input[type="date"] {
   padding: 15px 0;
 }
 
-/* Input with Material Design Animation */ 
-
-.bar  { position:relative; display:block; width: 100%; }
-.bar:before, .bar:after   {
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:#7c3f91; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-}
-
-.bar:before {
-  left:50%;
-}
-.bar:after {
-  right:50%; 
-}
-
-.highlight {
-  position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-}
-
-/* Active State */
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
-}
-
-
-/* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
-}
-
-/* Kit */
-.kit--list {
-  list-style: none;
-  text-align: left;
-}
-
-
-/* Company */ 
-.company {
-  margin: 1rem 0 5rem 0;
-}
-
-.process--title {
-  margin-top: 3rem;
-}
-
-.selectCompanyRadio img {
-	width: 14rem;
-	margin-top: .8rem;
-}
-
-.options--container {
-  min-height: 21rem;
-  padding: 4rem 0;
-  margin-top: -4rem;
-}
-
-.form--line.kit {
-  width: 97%;
-  margin: 20px auto;
-}
-
-.selectKit--title {
-    margin-bottom: -13px;
-}
-
-input#btnSecondStep,
-input#btnPreviousFirstStep,
-input#btnPreviousSecondStep,
-input#btnPayment  {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  left: 0;
-  bottom: 0;
-}
-
-.regForm input.btnCedis.action-button.theme--purple {
-  top: -2rem;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.cedis--container {
-  padding: 1rem 0;
-  margin: 4rem 0 0rem 0;
-}
-
-.form--payment__title {
-  margin-top: 6rem;
-}
-
-.form--payment__description {
-  padding: 3rem 0;
-}
-
-.form--payment img {
-  margin: 0 auto;
-  padding: 2rem 0 3rem 0;
-}
-
 /*********************************************************
 **                                                      **
-**                 x. titles                            **
+**                 8. Select Kit                        **
 **                                                      **
 *********************************************************/
 
-.kit--title {
-  text-align: left;
-  font-weight: bold;
-  margin: 1.5rem 0;
-}
-
-/*********************************************************
-**                                                      **
-**                 x. Themes                            **
-**                                                      **
-*********************************************************/
-
-.regForm .action-button.theme--purple {
-  background: #7c3f91;
-}
-
-.regForm .action-button.theme--cyan {
-  background: #44e3b3;
-}
-
-.regForm .action-button.theme--red {
-  background: #f63350;
-}
-
-.form--product {
+.c-kit--product {
   height: 32rem;
   width: 90%;
   margin: 0 auto;
   border-radius: 5px;
 }
 
-.form--product.theme--cyan {
-	background: #79efd7;
-}
-
-.form--product.theme--orange {
-  background: #f77f00;
-}
-
-figure.form--product img {
+.c-kit--product img {
   position: relative;
   top: 5rem;
   height: 24rem;
   margin: 0 auto;
 }
 
-.form--lastStep__products {
+.c-kit__title {
+  text-align: left;
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+
+.c-kit--list {
+  list-style: none;
+  text-align: left;
+}
+
+.c-kit-shipping {
+  margin-top: 3rem;
+}
+
+.l-company {
+  margin: 1rem 0 5rem 0;
+}
+
+.l-shipping-info {
+  min-height: 21rem;
+  padding: 4rem 0;
+  margin-top: -4rem;
+}
+
+.c-state, .c-city, .btnCedis, .c-cedis--list, .l-cedis, .l-shopping {
+	display: none;
+}
+
+.u-cedis--container {
+  padding: 1rem 0;
+  margin: 4rem 0 0rem 0;
+}
+
+.c-cedis--list {
+	margin-bottom: 4rem;
+	text-align: left;
+}
+
+.c-cedis--list__title {
+	margin-bottom: 4rem;
+	text-align: left;
+}
+
+/*********************************************************
+**                                                      **
+**                 9. Payment                           **
+**                                                      **
+*********************************************************/
+
+.o-payment__title {
+  margin-top: 6rem;
+}
+
+.o-payment__subtitle {
+  padding: 3rem 0;
+}
+
+.l-payment img {
+  margin: 0 auto;
+  padding: 2rem 0 3rem 0;
+}
+
+/*********************************************************
+**                                                      **
+**                 10. Business                         **
+**                                                      **
+*********************************************************/
+.o-business--products {
   background: #8d86ff;
   border-radius: 5px;
   padding: 5rem 1rem 3rem 1rem;
 }
 
-div.form--lastStep__products img {
+.o-business--products img {
   width: 100%;
   margin: 0 auto;
 }
 
-.i-social {
-	width: 2rem;
-}
-
-.form--lastStep {
+.o-business--item {
   width: 100%;
   height: 22rem;
   margin-top: 2rem;
@@ -757,7 +679,13 @@ div.form--lastStep__products img {
   position: relative;
 }
 
-.form--lastStep span {
+.o-business--item img {
+	width: 20rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.o-business--item span {
   position: absolute;
   width: 100%;
   text-align: center;
@@ -773,109 +701,110 @@ div.form--lastStep__products img {
   text-shadow: 0px 0px 1px #000;
 }
 
-.form--lastStep a:hover,
-.form--lastStep a:active {
+.o-business--item a:hover,
+.o-business--item a:active {
 	text-decoration: none;
 }
 
-.form--lastStep.theme--seaBlue {
-	background: #6aeee5;
-}
-
-.form--lastStep.theme--pink {
-	background: #f59dff;
-}
-
-.form--lastStep.theme--pink img {
-  width: 15rem;
-}
-
-.form--lastStep.theme--blue {
-	background: #d8eeff;
-}
-
-.form--lastStep.theme--rose {
-	background: #f5a6a8;
-}
-
-.form--lastStep.theme--yellow {
-	background: #f5f097;
-}
-
-.form--lastStep.theme--yellow img {
-  width: 11rem;
-}
-
-img.img-responsive.i-social {
+.o-business--item .i-social {
   width: 5rem;
   display: inline-block;
   vertical-align: middle;
-  margin: 4rem 0;
+  margin: 5rem 0;
+  opacity: .95;
+  transition: all .3s ease-in;
 }
 
-.form--lastStep.theme--green {
-	background: #bffab5;
+.o-business--item .i-social:hover {
+	transform: scale(1.1);
+	opacity: 1;
+	transition: all .2s ease-out;
 }
 
-.form--lastStep img {
-  width: 20rem;
-  margin: 0 auto;
-  padding-top: 2rem;
+.o-business--item .facebook-group {
+	width: 11.5rem;
 }
-
-
 
 /*********************************************************
 **                                                      **
-**                 x. Extras                            **
+**                 8. Themes                            **
 **                                                      **
 *********************************************************/
 
-.banner--benefits {
-	margin-top: 6rem;
+.t-cyan {
+	background: #79efd7;
 }
 
-/* States */ 
-.is-hidden {
-  display: none;
+.t-orange {
+  background: #f77f00;
 }
 
-.no-padding {
-  padding: 0;
+.t-red--nfuerza {
+	background: #ea4b57;
 }
 
-.v-error {
-  position: absolute;
-  font-size: 1rem;
-  color: #c70505;
-  left: 1.8rem;
-  bottom: -1.2rem;
+.t-purple {
+  background: #7c3f91;
 }
 
-.fullWidthButton {
-  width: 100%;
+.t-cyan {
+  background: #44e3b3;
 }
 
-.state, .city, .btnCedis, #cedisList, .cedis, .shopping {
-	display: none;
+.t-red {
+  background: #f63350;
 }
 
-.is-odd {
-	background: #f9f9f9;
+.t-seaBlue {
+	background: #6aeee5;
 }
 
-.cedis--title {
-	margin-bottom: 4rem;
-	text-align: left;
+.t-pink {
+	background: #f59dff;
 }
 
-div#addressShopping {
-    margin-top: 2rem;
+.t-blue {
+	background: #d8eeff;
 }
+
+.t-rose {
+	background: #f5a6a8;
+}
+
+.t-yellow {
+	background: #f5f097;
+}
+
+.t-green {
+	background: #bffab5;
+}
+
+.t-cyan {
+	background: #79efd7;
+}
+
+.t-orange-progress {
+  background: #f77f00;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.t-red-progress {
+	background: #ea4b57;
+	-webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.t-cyan-progress {
+  background: #44e3b3;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
 
 /*********************************************************
 **                                                      **
-**                 x. Animation                         **
+**                 5. Animations                        **
 **                                                      **
 *********************************************************/
 
@@ -955,6 +884,11 @@ div#addressShopping {
   to  { width:0; background:transparent; }
 }
 
+/*********************************************************
+**                                                      **
+**                 5. Responsive                        **
+**                                                      **
+*********************************************************/
 
 @media screen and (min-width: 320px) and (max-width: 680px) {
 	.benefits--container {
