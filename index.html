@@ -1,582 +1,579 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-	  <meta charset="UTF-8">
-	  <title>Afíliate - Omnilife</title>
-	  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://use.fontawesome.com/8c108ccc3e.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-		<div class="l-form container">
-			<form id="form" class="o-form" method="" action="">
-		    <!-- Progress Bar -->
-		    <div class="c-form--banner"></div>
-		    <ul id="form--progressBar" class="c-form--progressbar">
-		  	  <li class="t-orange-progress"></li>
-		    </ul>
-		    <!-- End of Progress Bar -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>Riley Sainz - FrontEnd Developer</title>
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="public/css/styles.css">
+  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+</head>
+</head>
+<body>
+	<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <!-- Home Page -->
+      <div class="row text-center header">
+        <img src="public/img/pp.jpg" alt="img" class="user_picture">
+        <h1>Riley Sainz</h1>
+        <p>FrontEnd Developer [Road to UI Designer & FullStack Developer]</p>
+        <div class="scroll_to_down">
+          <a id="arrow-down" href="#">
+            <i class="fa fa-angle-down"></i>
+          </a>
+        </div>
+      </div><!-- End of Home Page -->
+    </div>
+  </div><!-- End of Jumbotron -->
 
-		    <!-- First Step -->
-		    <fieldset class="o-step">
-		  	  <div class="col-md-8">
-			  	  <div class="l-select-sponsor">
-			  	    <h2 class="form--title">Queremos saber de ti</h2>
-			  	    <hr class="form--line">
-			  		  <h4 class="title">¿Cuentas con Patrocinador?</h4>
-			  		  <label>
-			  			  <input id="si" type="radio" class="c-sponsor__btn" name="hasSponsor" checked value="yes">
-			  			  <div class="has-sponsor box">
-			  				  <span>Sí</span>
-			  			  </div>
-			  		  </label>
+  <!-- Navbar -->
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><strong>Riley</strong>Sainz</a>
+      </div>
 
-			  		  <label>
-			  			  <input id="no" type="radio" class="c-sponsor__btn" name="hasSponsor" value="no">
-			  			  <div class="has-no-sponsor box">
-			  				  <span>No</span>
-			  			  </div>
-			  		  </label>
-			  	  </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="navHome" href="#home">Home</a></li>
+          <li><a class="navAbout" href="#about">About</a></li>
+          <li><a class="navResume" href="#resume">Resume</a></li>
+          <li><a class="navPortfolio" href="#portfolio">Portfolio</a></li>
+          <li><a class="navContact" href="#contact">Contact</a></li>
+          <li><a class="navBlog" href="http://unamentediscreta.blogspot.com">Blog</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav> <!-- /. Navbar -->
 
-			  		<div class="l-sponsor--container" id="sponsorContainer">
-			  			<!-- Sponsors -->
-				  		<div class="l-sponsor">
-				  			<div class="o-sponsor col-md-12">
-				  				<div class="c-group">
-				  					<input type="text" name="sponsorNumber" id="sponsorNumber" required>
-				  					<span class="highlight"></span>
-				  					<span class="bar"></span>
-				  					<label class="label">Número de Empresario Omnilife (Patrocinador)</label>
-				  				</div>
-				  			</div>
-				  		</div>
-				  		<!-- End of Sponsors -->
+  <!-- About Page -->
+  <div id="about" class="page">
+    <div class="container-fluid">
+      <!-- Page Title -->
+      <div class="row">
+        <div class="col-md-12 page_title">
+          <span>About</span>
+        </div>
+      </div><!-- /. Page Title -->
 
-				  		<!-- Sponsors -->
-				  		<div class="l-sponsor">
-				  			<div class="o-sponsor col-md-12" id="sponsorName">
-				  				<div class="c-group">
-				  					<input type="text" name="sponsorName" id="sponsorName" required>
-				  					<span class="highlight"></span>
-				  					<span class="bar"></span>
-				  					<label class="label">Nombre de Empresario Omnilife (Patrocinador)</label>
-				  				</div>
-				  			</div>
-				  		</div>
-				  		<!-- End of Sponsors -->
-			  		</div>
+      <div class="row">
+        <div class="col-md-12 about_user_title">FrontEnd Developer [Road to UI Designer & FullStack Developer]</div>
+      </div>
 
-						<!-- Personal Info -->
-			  		<div class="l-personal-info">
-			  			<!-- First Name -->
-			  	  	<div class="col-md-12 col-xs-12 col-ls-12">
-			  	  		<div class="c-group">
-			  	  			<input type="text" name="firstName" required>
-			  	  			<span class="highlight"></span>
-			  	  			<span class="bar"></span>
-			  	  			<label class="label">Nombre</label>
-			  	  		</div>
-			  	  	</div>	
-			  	  	<!-- End of First Name -->
+      <div class="row">
+        <!-- Bio -->
+        <div class="col-md-6 about_user_description">
+          <p>Hey, hi. I'm Riley Sainz and I studied Engineering in Computers Systems. I live actually in Zapopan, Jalisco, Mexico. After University I've continued studying and learning by my own, reading and gaining experience.
 
-							<!-- Last Name -->
-			  	  	<div class="col-md-6 col-xs-12 col-ls-12">
-			  	  		<div class="c-group">
-			  	  			<input type="text" name="lastName" required>
-			  	  			<span class="highlight"></span>
-			  	  			<span class="bar"></span>
-			  	  			<label class="label">Apellido Paterno</label>
-			  	  		</div>
-			  	  	</div>
-			  	  	<!-- End of Last Name -->
+          I've found something special in Design, is not only about aesthetic, is about what do you feel, about what do you think, what do you need.
 
-			  	  	<!-- Last Name -->
-			  	  	<div class="col-md-6 col-xs-12 col-ls-12">
-			  	  		<div class="c-group">
-			  	  			<input type="text" name="maternalName" required>
-			  	  			<span class="highlight"></span>
-			  	  			<span class="bar"></span>
-			  	  			<label class="label">Apellido Materno</label>
-			  	  		</div>
-			  	  	</div>
-			  	  	<!-- End of Last Name -->
-			  		</div>
-			  		<!-- End of Names Section -->
-					
-						<!-- Sex & Birthday Section -->
-				  	<div class="l-select-sex">
-				  		<div class="col-md-12 no-padding">
-				  			<div class="col-md-6">
-				  				<div class="o-select-sex">
-				  					<h4>Sexo: </h4>
+          I'm a FrontEnd Developer &amp; UI Designer and I have skills for designing and building Websites. If you're interested in something special, we can talk about your idea and the best way for get a solution.</p>
 
-				  					<!-- Select Female Option -->
-				  					<label class="c-select-sex">
-				  						<input type="radio" name="sexRadio" value="female" checked>
-				  						<span class="outer">
-				  							<span class="inner"></span>
-				  						</span>
-				  						Femenino
-				  					</label>
-				  					<!-- End of Female Option -->
+          <!-- CV Download Button -->
+          <div class="about_user-cv col-md-12">
+            <a href="Resume.pdf" target="_blank" class="btn large iconbtn">
+              <i class="fa fa-download"></i>
+              <span>DOWNLOAD CV</span>
+            </a>
+          </div>
+          <!-- /.CV Download Button -->
+        </div><!-- Bio -->
 
-										<!-- Select Male Option -->
-				  					<label class="c-select-sex">
-				  						<input type="radio" name="sexRadio" value="male">
-				  						<span class="outer">
-				  							<span class="inner"></span>
-				  						</span>
-				  						Masculino
-				  					</label>
-				  					<!-- End of Male Option -->
-				  				</div>
-				  			</div>
+        <!-- Social Media Info -->
+        <div class="col-md-6 about_user_grid">
+          <div class="row">
+            <div class="col-md-4 about_user_social">
+              <a href="https://www.facebook.com/UnaMenteDiscreta" target="_blank">
+                <i class="icon fa fa-facebook"></i>
+              </a>
+            </div>
+            <div class="col-md-4 about_user_social">
+              <a href="http://www.twitter.com/OhmSainz" target="_blank"><i class="icon fa fa-twitter"></i></a>
+            </div>
+            <div class="col-md-4 about_user_social">
+              <a href="https://www.linkedin.com/pub/omar-sainz/64/646/889" target="_blank">
+                <i class="icon fa fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 about_user_social">
+              <a href="http://plus.google.com/OmarSainz" target="_blank">
+                <i class="icon fa fa-google-plus"></i>
+              </a>
+            </div>
+            <div class="col-md-4 about_user_social">
+              <a href="http://www.github.com/OmarSainz" target="_blank">
+                <i class="icon fa fa-github"></i>
+              </a>
+            </div>
+            <div class="col-md-4 about_user_social">
+              <a href="http://es.pinterest.com/iOS23/" target="_blank">
+                <i class="icon fa fa-pinterest"></i>
+              </a>
+            </div>
+          </div>
 
-				  			<div class="col-md-6">
-				  				<label class="c-birthday">Fecha de Nacimiento</label>
-				  				<input type="date" name="birthday" required>
-				  			</div>
-				  		</div>
-				  	</div>
-						<!-- End of Sex & Birthday Section -->
+        </div><!-- ./Social Media Info -->
+      </div>
+    </div>
+  </div>
 
-						<!-- Personal Info Section -->
-						<div class="form--section__personalInfo">
-							<!-- Phone -->
-							<div class="col-md-12 col-xs-12 col-ls-12">
-								<div class="c-group">
-									<input type="tel" name="phone" required>
-									<span class="highlight"></span>
-									<span class="bar"></span>
-									<label class="label">Número Telefónico</label>
-								</div>
-							</div>
-							<!-- End of Phone -->
+  <div class="container-fluid services">
+    <div class="row">
+      <!-- Services -->
+      <div class="col-md-4 services_item">
+        <span><i class="fa fa-rocket"></i></span>
+        <div class="service_title">FrontEnd</div>
+        <div class="description">Layouting Web Sites with Technologies like HTML5, CSS3, jQuery, Bower, Gulp, etc. I like build and take new challenges.</div>
+      </div>
 
-							<!-- Email -->
-							<div class="col-md-6 col-xs-12 col-ls-12 u-margin-bottom">
-								<div class="c-group">
-									<input type="email" name="email" required>
-									<span class="highlight"></span>
-									<span class="bar"></span>
-									<label class="label">Correo Electrónico</label>
-								</div>
-								<!--label class="v-error">Tu correo debe de contener un @</label-->
-							</div>
-							<!-- End of Email -->
+      <div class="col-md-4 services_item">
+        <span><i class="fa fa-paint-brush"></i></span>
+        <div class="service_title">UI Design</div>
+        <div class="description">Design Interfaces is not only about aesthetic, neither about colours or images, is about people's problems to solve.</div>
+      </div>
 
-							<!-- Confirm Email -->
-							<div class="col-md-6 col-xs-12 col-ls-12">
-								<div class="c-group">
-									<input type="email" name="confirmEmail" required>
-									<span class="highlight"></span>
-									<span class="bar"></span>
-									<label class="label">Confirmar Correo</label>
-								</div>
-							</div>
-							<!-- End of Confirm Email -->		
-						
-						</div>
-						<!-- End of Personal Info -->
-					</div>
+      <div class="col-md-4 services_item">
+        <span><i class="fa fa-mobile"></i></span>
+        <div class="service_title">Responsive</div>
+        <div class="description">Web Sites are not only for PC, Responsive is not a trend, is a must. Tablets, iPad (normal &amp; retina), Mobile &amp; iPhone.</div>
+      </div>
+      <!-- /Services -->
+    </div>
+  </div>
 
-					<div class="col-md-4 o-benefits">
-						<img src="img/banner-beneficios.png" alt="" class="img-responsive c-banner-benefits">
-					</div>
+  <!-- Resume  -->
+  <div class="page">
+    <!-- Page Title -->
+    <div class="col-md-12 page_title resume"><span>Resume</span></div>
+    <!-- /Page Title -->
+  </div>
+  <!-- ./Resume -->
 
-					<input type="button" id="btnFirstStep" class="next action-button fullWidthButton t-purple" value="Siguiente">
-		  	</fieldset>
-		  	<!-- End of First Step -->
+  <div id="resume" class="page resume">
+    <div class="container">
+      <div class="row">
+        <div class="section_title resume">
+          <i class="fa fa-book color">
+          </i>
+          <span>Education</span>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Education -->
+        <div class="item col-md-4 education">
+          <div class="date">September 2016</div>
+          <div class="title">Psychology</div>
+          <div class="subtitle">UTEG Zapopan</div>
+          <div class="body">Actually I'm studying Psychology, maybe you have the question: Why Psychology? I'm a Polimath, learning trying to understand a lot of things around us. </div>
+        </div>
 
-		  	<!-- Second Step -->
-		  	<fieldset class="o-step">
-		  		<h4 class="c-selectKit--title">Selecciona el kit y compañía de envío</h4>
-		  		<div class="col-md-12">
-	  				<hr class="c-line kit">
-	  			</div>
-		  		<div class="col-md-12 no-padding">
-		  		  <!-- Kit Omnilife -->
-		  			<div class="col-md-4 col-xs-12 col-ls-12 selectKit">
-		  				<figure class="figure c-kit--product t-cyan">
-		  					<img src="img/mochila.png" alt="" class="img-responsive">
-		  				</figure>
-		  				<label class="c-select-kit">
-		  					<input type="radio" name="kit" value="kitNutricional" checked>
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		Kit Maletín Nutricional Web
-		  				</label>
-		  				<h4 class="c-kit__title">Contiene:</h4>
-		  				<div class="c-kit--list">
-		  					<li>&bull; Mochila</li>
-		  					<li>&bull; Omniguía</li>
-		  					<li>&bull; Guía Práctica Omnilife</li>
-		  					<li>&bull; Revista</li>
-		  					<li>&bull; DVD Entrenamiento con Jorge Vergara</li>
-		  					<li>&bull; Bolsa Ecológica</li>
-		  				</div>
-		  			</div>
-		  			<!-- End of Kit Omnilife -->
-     
-            <!-- Kit SeyTú -->
-		  			<div class="col-md-4 col-xs-12 col-ls-12">
-		  				<figure class="c-kit--product t-orange">
-		  					<img src="img/bolso.png" alt="" class="img-responsive">
-		  				</figure>
-		  				<label class="c-select-kit">
-		  					<input type="radio" name="kit" value="kitSeyTu">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		Kit SeyTú Web
-		  				</label>
+        <div class="item col-md-4 education">
+          <div class="date">October 2014</div>
+          <div class="title">Interaction Design</div>
+          <div class="subtitle">Interaction Design Foundation</div>
+          <div class="body">Actually I'm studying Interaction Design and User Experience, learning about Visual Perception, Information Visualization, Human-Computer Interaction, User Centred Design, etc.</div>
+        </div>
 
-		  				<h4 class="c-kit__title"">Contiene:</h4>
-		  				<div class="c-kit--list">
-		  					<li>&bull; Bolso Kit SeyTú</li>
-		  					<li>&bull; Catálogo</li>
-		  					<li>&bull; Estuche Emprende</li>
-		  					<li>&bull; Guía Práctica Omnilife</li>
-		  					<li>&bull; DVD de Entrenamiento con Jorge Vergara</li>
-		  				</div>
-		  			</div>
+        <div class="item col-md-4 education">
+          <div class="date">Sept 2014</div>
+          <div class="title">Digital Design</div>
+          <div class="subtitle">Universidad de Artes Digitales</div>
+          <div class="body">Learning Photography, Psychology of Perception, Design Theory, updgrading skills in Photoshop, etc.</div>
+        </div>
 
-		  			<div class="col-md-4 col-xs-12 col-ls-12">
-		  				<figure class="c-kit--product t-red--nfuerza">
-		  					<img src="img/mochila.png" alt="" class="img-responsive">
-		  				</figure>
-		  				<label class="c-select-kit">
-		  					<input type="radio" name="kit" value="kitNFuerza">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		Kit NFuerza
-		  				</label>
+        <div class="item col-md-4 education">
+          <div class="date">Oct 2013</div>
+          <div class="title">Engineering in Computers Systems</div>
+          <div class="subtitle">Instituto Tecnológico de La Paz</div>
+          <div class="body">My first career, software and websites programming (server side), databases, in general Backend and Software Engineering.</div>
+        </div>
+        <!-- ./Education -->
+      </div>
 
-		  				<h4 class="c-kit__title">Contiene:</h4>
-		  				<div class="c-kit--list">
-		  					<li>&bull; Kit NFuerza</li>
-		  					<li>&bull; Catálogo</li>
-		  					<li>&bull; Estuche Emprende</li>
-		  					<li>&bull; Guía Práctica Omnilife</li>
-		  					<li>&bull; DVD de Entrenamiento con Jorge Vergara</li>
-		  				</div>
-		  			</div>
-		  		</div>
-		  		<!-- End of Kit SeyTú -->
+      <div class="row">
+        <div class="section_title resume">
+          <i class="fa fa-book color">
+          </i>
+          <span>Employment</span>
+        </div>
+      </div>
 
-		  		<div class="col-md-12 c-kit-shipping ">
-		  			<h4 class="text-left ">Selecciona el método de envío de tu Kit de preferencia: </h4>
-		  			<hr class="c-line">
-		  		</div>
+      <div class="row">
+        <div class="item col-md-3 employment">
+          <div class="date">May 2016 - </div>
+          <div class="title">Teacher</div>
+          <div class="subtitle">DesafíoLatam</div>
+          <div class="body">Creating new strategies for teaching FrontEnd Technologies. Layouting Process. Teaching how to build Websites with HTML5, CSS3 and JavaScript [jQuery & Angular] for Interaction.</div>
+        </div>
 
-					<!-- Company -->
-		  		<div class="col-md-4 l-company text-left">
-		  			<div class="col-md-12 col-xs-12 col-ls-12 selectCompany">
-		  				<label class="c-select-company">
-            		<input type="radio" name="cedis" id="cedis" value="yes">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		Recoger en CEDIS
-          		</label>
-		  			</div>
-		  			<div class="col-md-12 col-xs-12 col-ls-12">
-		  				<label class="c-select-company">
-            		<input type="radio" name="cedis" id="house" value="no">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		Envío a Domicilio
-          		</label>
-		  			</div>
-		  		</div>
-		  		<!-- End of Company -->
+        <div class="item col-md-3 employment">
+          <div class="date">May 2015 - </div>
+          <div class="title">Teacher</div>
+          <div class="subtitle">Digital Arts University</div>
+          <div class="body">teaching Swift [iOS] and Programming Basics. UX/UI Process. Engineering Software and Mobile Development.</div>
+        </div>
 
-		  		<div class="col-md-8 l-shipping-info">
-		  			<div class="cedis" id="cedis">
-		  				<!-- State -->
-							<div class="col-md-4 col-xs-12">
-								<select name="selectState" id="state" class="c-state">
-									<option value="" disabled selected>Selecciona tu estado:</option>
-									<option value="1">Aguascalientes</option>
-									<option value="2">Baja California</option>
-									<option value="3">Baja California Sur</option>
-								</select>
-							</div>
-							<!-- End of State -->
 
-							<!-- Select City -->
-							<div class="col-md-4 col-ls-12">
-								<select name="secretQuestion" id="city" class="c-city">
-									<option value="" disabled selected>Selecciona tu ciudad:</option>
-									<option value="1">La Paz</option>
-									<option value="2">Cabo San Lucas</option>
-									<option value="3">Loreto</option>
-								</select>
-							</div>
-							<!-- End of City -->
+        <div class="item col-md-3 employment">
+          <div class="date">May 2015 - May 2016</div>
+          <div class="title">Lead FrontEnd Developer</div>
+          <div class="subtitle">Paradoja</div>
+          <div class="body">Coordinating and creating new strategies for detect and solving problems. Lead FrontEnd Web Development. UX/UI PRocess.</div>
+        </div>
 
-							<div class="col-md-4 u-cedis--container">
-								<input type="button" name="showCEDIS" id="showCEDIS" class="btnCedis action-button t-purple" value="Mostrar CEDIS">
-							</div>
-			  		</div>
+        <div class="item col-md-3 employment">
+          <div class="date">Feb 2015 - </div>
+          <div class="title">Project Manager / Co-Founder</div>
+          <div class="subtitle">ReactiveTech</div>
+          <div class="body">Creating new strategies for detect and solving problems. UX/UI Process. Layout Websites. Applying User research and Interviews.</div>
+        </div>
+      </div>
 
-						<div class="l-shopping shopping" id="shopping">
-							<!-- Address Shopping -->
-							<!-- Address -->
-							<div class="col-md-12 col-xs-12 col-ls-12">
-								<div class="c-group">
-									<input type="text" name="address" required>
-									<span class="highlight"></span>
-									<span class="bar"></span>
-									<label class="label">Dirección (nombre de la calle y número)</label>
-								</div>
-							</div>
-							<!-- End of Address -->
-							
-							<!-- Address -->
-							<div class="col-md-12 col-xs-12 col-ls-12">
-								<div class="c-group">
-									<input type="text" name="addressLocation" required>
-									<span class="highlight"></span>
-									<span class="bar"></span>
-									<label class="label">¿Entre qué calles cruza?</label>
-								</div>
-							</div>
-							<!-- End of Address -->
+      <div class="row">
+        <!-- Employment -->
+        <div class="item col-md-3 employment">
+          <div class="date">Oct 2014 - Feb 2015</div>
+          <div class="title">FrontEnd / UI Designer</div>
+          <div class="subtitle">IndieStudio</div>
+          <div class="body">Layout Websites. Used SMACSS Architecture, Preprocessors and Task Runner. PageSpeed Performance.</div>
+        </div>
 
-							<!-- Location -->
-							<div class="col-md-12 col-xs-12 col-ls-12 no-padding">
-								<div class="col-md-6 col-xs-12 col-ls-12">
-									<div class="c-group">      
-	          				<input type="text" name="colony" required>
-	          				<span class="highlight"></span>
-	          				<span class="bar"></span>
-	          				<label class="label">Colonia</label>
-	        				</div>
-								</div>
+        <div class="item col-md-3 employment">
+          <div class="date">Mar 2014 - Oct 2014</div>
+          <div class="title">FrontEnd / UI Designer</div>
+          <div class="subtitle">JetApps [PaaS]</div>
+          <div class="body">Implemented designs, including layouting, PageSpeed Performance. Applied Brief, User Research and Interviews.</div>
+        </div>
 
-								<div class="col-md-6 col-xs-12 col-ls-12">
-									<div class="c-group">      
-	          				<input type="text" name="postalCode" required>
-	          				<span class="highlight"></span>
-	          				<span class="bar"></span>
-	          				<label class="label">Código Postal</label>
-	        				</div>
-								</div>
-							</div>
-							<!-- End of Location -->
+        <div class="item col-md-3 employment">
+          <div class="date">Oct 2013 - Dec 2014</div>
+          <div class="title">FrontEnd / UI Designer</div>
+          <div class="subtitle">TAT-8</div>
+          <div class="body">Implemented designs, including layouting, PageSpeed Performance. Applied Brief, User Research and Interviews.</div>
+        </div><!-- Employment -->
 
-							<!-- City & State -->
-							<div class="col-md-12 col-xs-12 col-ls-12 no-padding u-margin-bottom">
-								<div class="col-md-6 col-xs-12 col-ls-12">
-			          	<div class="c-group">      
-			          		<input type="text" name="state" required>
-			          		<span class="highlight"></span>
-			          		<span class="bar"></span>
-			          		<label class="label">Estado</label>
-			        		</div>
-	        			</div> 
+        <div class="item col-md-3 employment">
+          <div class="date">Aug 2013 - Jan 2014</div>
+          <div class="title">FrontEnd / UI Designer</div>
+          <div class="subtitle">Response Team</div>
+          <div class="body">Implemented designs and layouting Web Apps and Web Sites. Wrote maintainable code and markup, using SMACSS Architecture.</div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Employment -->
 
-	        			<div class="col-md-6 col-xs-12 col-ls-12">
-			          	<div class="c-group">      
-			          		<input type="text" name="city" required>
-			          		<span class="highlight"></span>
-			          		<span class="bar"></span>
-			          		<label class="label">Ciudad</label>
-			        		</div>
-	        			</div>  
-							</div>
-							<!-- End of City & State -->
-						</div>
+       <div class="item col-md-3 employment">
+          <div class="date">Jun 2013 - Aug 2013</div>
+          <div class="title">Web Designer / Software Dev</div>
+          <div class="subtitle">Pueblo Bonito Consultores</div>
+          <div class="body">Wrote maintainable and extensible code for a Desktop Application. Redesigned and Updated a Intranet and applied crossbrowser with IE7+.</div>
+        </div><!-- Employment -->
+      </div>
+       <div class="row">
+          <div class="section_title resume">
+            <span>Tutorials</span>
+         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section_title skills">
+            Preprocessors
+          </div>
+        </div>
+      </div>
+      <div class="row tutorials-row">
+        <!-- Skills -->
+        <div class="col-md-4 col-md-offset-2 education-col ">
+          <iframe src="//www.slideshare.net/slideshow/embed_code/17142207" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+        </div>
 
-		  		</div>
+        <div class="col-md-4 education-col">
+          <iframe src="//slides.com/ios23/la-guerra-de-los-preprocesadores/embed" width="100%" height="356" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <!-- ./Skills -->
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <div class="section_title skills">
+            Videos
+          </div>
+        </div>
+      </div>
+       <div class="row tutorials-row">
+        <!-- Skills -->
+          <div class="col-md-4 education-col">
+           <iframe width="100%" height="356" src="https://www.youtube.com/embed/gTmcZO9iqJo" frameborder="0" allowfullscreen></iframe>
+        </div>
+         <div class="col-md-4 education-col">
+          <iframe width="100%" height="356" src="//www.youtube.com/embed/DB2SuTfwy58" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-					<!-- List of CEDIS -->
-		  		<div class="col-md-12 c-cedis--list" id="cedisList">
-		  			<h4 class="c-cedis--list__title">Selecciona el CEDIS que te quede más cerca:</h4>
-		  			<div class="col-md-12 col-xs-12 col-ls-12 text-left is-odd">
-		  				<label class="c-select-cedis">
-            		<input type="radio" name="company" value="dhl">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		RLIDERES 3D - DAVID A. SIQUEIROS 489 L-6 LAS GLORIAS
-          		</label>
-			  		</div>
+         <div class="col-md-4 education-col">
+          <iframe width="100%" height="356" src="//www.youtube.com/embed/GS_DBV86rho?list=PLdi30_AUNhZHJ-1zSmmNXDrxJfgrLI5Ql" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <!-- ./Skills -->
+      </div>
+    </div>
+  </div>
+  <!-- ./Resume -->
 
-			  		<div class="col-md-12 col-xs-12 col-ls-12 text-left">
-			  			<label class="c-select-cedis">
-            		<input type="radio" name="company" value="estafeta">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		"REALIZANDO SUEOS" - REVOLUCION 160 EL PITILLAL
-          		</label>
-			  		</div>	
+  <!-- Portfolio Selector -->
+  <!-- Resume -->
+  <div class="page portfolio">
+    <div class="col-md-12 page_title portfolio">
+      <span>Portfolio</span>
+    </div>
 
-			  		<div class="col-md-12 col-xs-12 col-ls-12 selectCompany text-left is-odd">
-		  				<label class="c-select-cedis">
-            		<input type="radio" name="company" value="dhl">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		RLIDERES 3D - DAVID A. SIQUEIROS 489 L-6 LAS GLORIAS
-          		</label>
-			  		</div>
+    <div class="col-md-12">
+      <nav>
+        <ul class="portfolio_selector">
+          <li class="filter active btn" data-filter="all">All</li>
+          <li class="filter btn" data-filter=".webdesign">Web Design</li>
+          <li class="filter btn" data-filter=".webdevelopment">Web Development</li>
+          <li class="filter btn" data-filter=".design">Design</li>
+        </ul>
+      </nav>
+    </div>
 
-			  		<div class="col-md-12 col-xs-12 col-ls-12 text-left">
-			  			<label class="c-select-cedis">
-            		<input type="radio" name="company" value="estafeta">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		"REALIZANDO SUEOS" - REVOLUCION 160 EL PITILLAL
-          		</label>
-			  		</div>	
+    <div id="portfolio_items" class="portfolio_items container">
+      <div class="portfolio_item mix design col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/conver-t-compressor.png" alt="...">
+          <div class="caption">
+            <h3>Converse Fake Poster</h3>
+            <p>Poster for Digital Design</p>
+            <p><a href="public/img/normal/Converse.png" target="_blank" class="btn btn-primary" role="button">See</a></p>
+          </div>
+        </div>
+      </div>
 
-			  		<div class="col-md-12 col-xs-12 col-ls-12 selectCompany text-left is-odd">
-		  				<label class="c-select-cedis">
-            		<input type="radio" name="company" value="dhl">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		RLIDERES 3D - DAVID A. SIQUEIROS 489 L-6 LAS GLORIAS
-          		</label>
-			  		</div>
+      <div class="portfolio_item mix design webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/gueyout-t.png" alt="...">
+          <div class="caption">
+            <h3>Güey Out!</h3>
+            <p>Web Platform with 4 sections: Animation, Articles, Photography and Video. Original content made by students from Audiovisual Production, Animation and Digital Design.</p>
+            <p><a href="public/img/normal/gueyout-.PNG" target="_blank" class="btn btn-primary" role="button">See</a></p>
+          </div>
+        </div>
+      </div>
 
-			  		<div class="col-md-12 col-xs-12 col-ls-12 text-left">
-			  			<label class="c-select-cedis">
-            		<input type="radio" name="company" value="estafeta">
-            		<span class="outer">
-              		<span class="inner"></span>
-            		</span>
-            		"REALIZANDO SUEOS" - REVOLUCION 160 EL PITILLAL
-          		</label>
-			  		</div>	
-		  		</div>
-		  		<!-- End of List -->
+      <div class="portfolio_item mix design col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/egypt-t.png" alt="...">
+          <div class="caption">
+            <h3>Egypt App</h3>
+            <p>Poster Design for Digital Design in Visual Art History class.</p>
+            <p><a href="public/img/normal/Egypt.png" target="_blank" class="btn btn-primary" role="button">See</a></p>
+          </div>
+        </div>
+      </div>
 
-		  		<input type="button" id="btnPreviousFirstStep" name="previous" class="c-btn btnPrevious previous action-button t-cyan" value="Regresar" />
-					<input type="button" id="btnSecondStep" name="next" class="c-btn btnNext next action-button t-purple" value="Siguiente" />
-		  	</fieldset>
-		 	 	<!-- End of Second Step -->
+      <div class="portfolio_item mix webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/jetapps-t.png" alt="...">
+          <div class="caption">
+            <h3>JetApps</h3>
+            <p>Design for JetApps which is a PaaS which actually is offline.</p>
+            <p><a href="public/img/normal/JetApps-Landing.jpg" target="_blank" class="btn btn-primary" role="button">See</a></p>
+          </div>
+        </div>
+      </div>
 
-		  	<!-- Third Step -->
-		  	<fieldset class="o-step">
-		  		<div class="l-payment">
-		  			<h4 class="o-payment__title">Selecciona tu mejor opción de pago</h4>
-		  			<div class="col-md-12">
-		  				<hr class="form--line">
-		  			</div>
-		  			<p class="o-payment__subtitle">Finaliza tu proceso de afiliación seleccionando tu forma de pago:</p>
-		  			<div class="col-md-4 col-md-offset-2">
-	          	<label class="c-select-payment">
-	            	<input type="radio" name="kit" value="debit" checked>
-	            	<span class="outer">
-	              	<span class="inner"></span>
-	            	</span>
-	            	Tarjetas de Débito
-	          	</label>
-	        	</div>
-	        	<div class="col-md-4">
-	          	<label class="c-select-payment">
-	            	<input type="radio" name="kit" value="credit">
-	            	<span class="outer">
-	              	<span class="inner"></span>
-	            	</span>
-	            	Tarjetas de Crédito
-	          	</label>
-	        	</div>
-	        	<div class="col-md-12">
-	          	<img src="img/bancos.png" alt="" class="img-responsive">
-	        	</div>
-		  		</div>
-		  		<input type="button" id="btnPreviousSecondStep" name="previous" class="c-btn btnPrevious previous action-button t-cyan" value="Regresar" />
-			  	<input type="button" id="btnPayment" name="next" class="c-btn btnNext next action-button t-purple" value="Confirmar Pago">
-		  	</fieldset>
-		  	<!-- End of Third Step -->
+       <div class="portfolio_item mix webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/cineapp-t.png" alt="...">
+          <div class="caption">
+            <h3>CineApp</h3>
+            <p>Design for Colombian App</p>
+            <p><a href="public/img/normal/cineapp.png" target="_blank" class="btn btn-primary" role="button">See</a></p>
+          </div>
+        </div>
+      </div>
 
-		  	<!-- Last Step -->
-		  	<fieldset class="o-step">
-		  		<div class="l-business">
-		  			<h4 class="o-business__title">Conoce más sobre tu negocio</h4>
-		  			<hr class="c-line">
-		  			<div class="col-md-12 col-xs-12">
-		  				<div class="o-business--products">
-		  					<img src="img/productos_header.png" alt="" class="img-responsive">
-		  				</div>
-		  			</div>
+       <div class="portfolio_item mix webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/mobile-leader-t.png" alt="...">
+          <div class="caption">
+            <h3>Líderes App</h3>
+            <p>Design for App in Mejorando.la's community</p>
+            <p><a href="public/img/normal/mobile-leader-a.png" target="_blank" class="btn btn-primary" role="button">See</a></p>
+          </div>
+        </div>
+      </div>
 
-		  			<div class="col-md-4 col-xs-12">
-		  				<div class="o-business--item t-seaBlue">
-		  					<a href="http://omnilife.com/shopping/">
-		  						<img src="img/banner_1.png" alt="" class="img-responsive">
-		  						<span>Crea tu contraseña y compra</span>
-		  					</a>
-		  				</div>
-		  			</div>
-		  			<div class="col-md-4 col-xs-12">
-		  				<div class="o-business--item t-pink">
-		  					<a href="https://www.omnilife.com/login/?ref=zona-de-empresarios" target="_blank">	
-		  						<img src="img/banner_2.png" alt="" class="img-responsive">
-		  						<span>Ingresa a tu zona de empresario</span>
-		  					</a>
-		  				</div>
-		  			</div>
-		  			<div class="col-md-4 col-xs-12">
-		  				<div class="o-business--item t-blue">
-		  					<a href="http://omnilife.com/cresiendo" target="_blank">
-		  						<img src="img/banner_3.png" alt="" class="img-responsive">
-		  						<span>Conoce CreSiendo</span>
-		  					</a>
-		  				</div>
-		  			</div>
-						<div class="col-md-4 col-xs-12">
-		  				<div class="o-business--item t-rose">
-		  					<a href="https://www.facebook.com/omnilifeoficial" target="_blank">
-		  						<img src="img/fb.png" alt="" class="img-responsive i-social">
-		  					</a>
-		  					<a href="https://instagram.com/omnilifeoficial/" target="_blank">
-		  						<img src="img/in.png" alt="" class="img-responsive i-social">
-		  					</a>
-		  					<a href="https://twitter.com/Omnilife" target="_blank">
-		  						<img src="img/tw.png" alt="" class="img-responsive i-social">
-		  					</a>
-		  					<a href="https://www.youtube.com/user/omnilifeoficial" target="_blank">
-		  						<img src="img/yt.png" alt="" class="img-responsive i-social">
-		  					</a>
-		  					<span>Síguenos en Redes Sociales</span>
-		  				</div>
-		  			</div>	
-		  			<div class="col-md-4 col-xs-12">
-		  				<div class="o-business--item t-yellow">
-		  					<a href="https://www.facebook.com/groups/EmpresarioOmnilife/" target="_blank">	
-		  						<img src="img/banner_5.png" alt="" class="img-responsive facebook-group">
-		  						<span>Únete al grupo de Empresarios</span>
-		  					</a>
-		  				</div>
-		  			</div>
-		  			<div class="col-md-4 col-xs-12">
-		  				<div class="o-business--item t-green">
-		  					<a href="https://www.omnilife.com/">
-		  						<img src="img/banner_6.png" alt="" class="img-responsive">
-		  						<span>Visita Omnilife.com</span>
-		  					</a>
-		  				</div>
-		  			</div>	  			
-		  		</div>
-		  	</fieldset>
-		  <!-- End of Last Step -->
-		  </form>
-		</div>
-		
-		<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-	  <script src="js/jquery.easing.min.js" type="text/javascript"></script>
-		<script src="js/main.js"></script>
-  </body>
+       <div class="portfolio_item mix webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/layout-a-t.png" alt="...">
+          <div class="caption">
+            <h3>Personal Site</h3>
+            <p>Past Design in my Portfolio</p>
+            <p><a href="public/img/normal/layout-a.png" class="btn btn-primary" target="_blank" role="button">See</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio_item mix webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/colegio-t.png" alt="...">
+          <div class="caption">
+            <h3>Colegio Aventura</h3>
+            <p>Design for Colombian School Website</p>
+            <p><a href="public/img/normal/colegio.png" class="btn btn-primary" target="_blank" role="button">See</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio_item mix webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/idead-t.png" alt="...">
+          <div class="caption">
+            <h3>IDEAD</h3>
+            <p>Design for Colombian School</p>
+            <p><a href="public/img/normal/IDEAD.png" class="btn btn-primary" target="_blank" role="button">See</a></p>
+          </div>
+        </div>
+      </div>  
+
+      <div class="portfolio_item mix webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/sw-t.png" alt="...">
+          <div class="caption">
+            <h3>SW</h3>
+            <p>Design for Downloads Website</p>
+            <p><a href="public/img/normal/sw.png" class="btn btn-primary" target="_blank" role="button">See</a></p>
+          </div>
+        </div>
+      </div>    
+
+      <div class="portfolio_item mix webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/tejuino-t.png" alt="...">
+          <div class="caption">
+            <h3>Tejuino Sports</h3>
+            <p>Design for a Sport Store</p>
+            <p><a href="public/img/normal/mobile-tejuino-a.png" class="btn btn-primary" target="_blank" role="button">See</a></p>
+          </div>
+        </div>
+      </div>    
+
+      <div class="portfolio_item mix webdesign col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/bandas-t.png" alt="...">
+          <div class="caption">
+            <h3>Mozart</h3>
+            <p>Design for an music event in a Website</p>
+            <p><a href="public/img/normal/bandas.png" class="btn btn-primary" target="_blank" role="button">See</a></p>
+          </div>
+        </div>
+      </div> 
+
+       <div class="portfolio_item mix webdevelopment col-md-4 mix_all">
+        <div class="thumbnail">
+          <img src="public/img/thumbnail/tat-8-t.png" alt="...">
+          <div class="caption">
+            <h3>TAT-8</h3>
+            <p>Design for Structured cabling Company</p>
+            <p><a href="http://tat-8.mx/" target="_blank" class="btn btn-primary" role="button">Visit</a></p>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+  <!-- ./Portfolio Selector -->
+
+  <!-- Social -->
+   <div id="contact" class="page">
+    <div class="container-fluid">
+      <!-- Page Title -->
+      <div class="row">
+        <div class="col-md-12 page_title contact">
+          <span>Contact</span>
+        </div>
+      </div><!-- /. Page Title -->
+
+      <div class="row">
+        <div class="col-md-12 page-title contact-container">
+          <div class="row contact_row">
+
+            <div class="col-md-4 contact_col">
+              <span class="img-circle"><i class="fa fa-map-marker"></i></span>
+              <div class="contact_container">
+                <div class="contact_title">Address</div>
+                <div class="contact_description">Zapopan, Jalisco.</div>
+              </div>
+            </div>
+
+            <div class="col-md-4 contact_col">
+              <span class="img-circle"><i class="fa fa-phone"></i></span>
+              <div class="contact_container">
+                <div class="contact_title">Phone</div>
+                <div class="contact_description">Just ask...</div>
+              </div>
+            </div>
+
+            <div class="col-md-4 contact_col">
+              <span class="img-circle"><i class="fa fa-envelope-o "></i></span>
+              <div class="contact_container">
+                <div class="contact_title">Email</div>
+                <div class="contact_description"><a href="mailto:ohmsainz@gmail.com">ohmsainz@gmail.com</a></div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <h2>Follow me!</h2>
+            </div>
+
+            <div class="col-md-12">
+              <div class="social_icons">
+                <a href="https://www.facebook.com/OhmSainz" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="http://www.twitter.com/OhmSainz"><i class="fa fa-twitter"></i></a>
+                <a href="http://plus.google.com/OmarSainz" target="_blank"><i class="fa fa-google-plus"></i></a>
+                <a href="http://www.github.com/OmarSainz" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.tumblr.com/blog/ios23" target="_blank"><i class="fa fa-tumblr"></i></a>
+                <a href="https://vk.com/ohmsainz" target="_blank"><i class="fa fa-vk"></i></a>
+                <a href="http://es.pinterest.com/iOS23" target="_blank"><i class="fa fa-pinterest"></i></a>
+                <a href="http://instagram.com/ohmsainz" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/pub/omar-sainz/64/646/889" target="_blank"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ./Social -->
+
+  <!-- Footer -->
+  <footer>
+    <h3>2014&copy; Omar Sainz</h3>
+  </footer>
+  <!-- ./Footer -->
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script src="public/js/jquery.easypiechart.min.js"></script>
+  <script src="public/js/jquery.mixitup.min.js"></script>
+  <script src="public/js/scripts.js"></script>
+</body>
 </html>
