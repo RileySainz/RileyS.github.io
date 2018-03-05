@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<form>
+				<!--form>
 				  <div class="form-group">
 				    <label for="r90Height">Estatura</label>
 				    <input type="text" class="form-control" id="r90Height" placeholder="Estatura">
@@ -22,15 +22,22 @@
 				    <input type="text" class="form-control" id="r90Weight" placeholder="Peso">
 				  </div>
 				  <input id="btnIMC" type="submit" class="btn btn-default" value="Calcular IMC" placeholder="Calcular IMC">
-				</form>
+				</form-->
 				<div id="app">
 				  <input id="height" v-model.number="height" placeholder="Altura">
 				  <input id="weight" v-model.number="weight" placeholder="Peso">
 					<p>Tu estatura es de: {{ height }} cm y tu peso es de: {{ weight }} kg</p>
-					<input id="btnIMC" type="submit" class="btn btn-default" value="Calcular IMC" v-on:click="imc">
+					<!--input id="btnIMC" type="submit" class="btn btn-default" value="Calcular IMC" v-on:click="imc"-->
 					<p v-if="height == ''">Tu IMC es de: </p>
 					<p v-else>Tu IMC es de: {{ imc() }}</p>
-
+					<p v-if="imc() < 16">Tienes Infrapeso: Delgadez Severa</p>
+					<p v-else-if="(imc() <= 16.99)">Tienes Infrapeso: Delgadez moderada</p>
+					<p v-else-if="(imc() <= 18.49)">Tienes Infrapeso: Delgadez aceptable</p>
+					<p v-else-if="(imc() <= 24.99)">Tienes Peso Normal</p>
+					<p v-else-if="(imc() <= 29.99)">Tienes Sobrepeso</p>
+					<p v-else-if="(imc() <= 34.99)"> Obeso: Tipo I</p>
+					<p v-else-if="(imc() < 40.00)"> Obeso: Tipo II</p>
+					<p v-else-if="(imc() >= 40.00)"> Obeso: Tipo III</p>
 				</div>
 			</div>
 		</div>
