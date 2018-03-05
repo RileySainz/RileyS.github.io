@@ -43,6 +43,10 @@ body {
     margin: .5rem auto;
 }
 
+.imc--btn:hover {
+    background: #d0922f;
+    color: #fff;
+}
 input.form-control {
 	background: transparent;
     border: 1px solid #fff;
